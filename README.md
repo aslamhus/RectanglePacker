@@ -46,6 +46,12 @@ const result = packer.calcTileProperties();
 console.log(result);
 ```
 
+## Test the RectanglePacker online
+
+If you'd like to take the algorithm for a spin, you can find a testing application at [https://aslamhus.github.io/RectanglePacker/example](https://aslamhus.github.io/RectanglePacker/example)
+
+Play with different screen areas, numbers of tiles, gutter size, tile aspect ratio and more.
+
 ## License
 
 This Rectangle Packer class is licensed under the [MIT License](LICENSE). Feel free to use and modify it according to your needs.

@@ -140,7 +140,7 @@ class RectanglePacker {
     this.tryLimit = tryLimit ?? 1000;
     // default try lmit is 800
     this.retries = 0;
-    this.retryLimit = retryLimit ?? 20;
+    this.retryLimit = retryLimit ?? 40;
     this.performanceStartTime = 0;
     this.performanceLimit = 1000;
     this.correctionStep = 0.1;
@@ -298,7 +298,7 @@ class RectanglePacker {
 
     if (this.completeRectangle) {
       // if the number of tiles is a prime number, then the rectangle will never be complete
-      if (this.tiles.length % 2 != 0) {
+      if (this.isPrime(this.tiles.length)) {
         throw new Error(
           'Solution is not possible for a complete rectangle with a prime number of tiles'
         );
@@ -645,24 +645,25 @@ class RectanglePacker {
    * @returns
    */
   tryCompletingRectangle(properties) {
-    if (this.retries < this.retryLimit) {
-      this.tries = [];
-      this.retries++;
-      // if remove tiles is enabled, then remove tiles and try again with same best guess
-      if (this.canRemoveTiles) {
-        this.removeTile();
-        this.bestGuessTileHeight = this.initialBestGuessTileHeight = this.calcBestGuessTileHeight();
-        return this.calcTileProperties();
-      }
-      // try again with a different starting best guess
-      this.bestGuessTileHeight = this.initialBestGuessTileHeight =
-        this.initialBestGuessTileHeight / 2;
-
+    console.log('retrying', this.retries, this.retryLimit);
+    // if (this.try < this.retryLimit) {
+    this.tries = [];
+    // this.retries++;
+    // if remove tiles is enabled, then remove tiles and try again with same best guess
+    if (this.canRemoveTiles) {
+      this.removeTile();
+      this.bestGuessTileHeight = this.initialBestGuessTileHeight = this.calcBestGuessTileHeight();
       return this.calcTileProperties();
-    } else {
-      // if we have reached the retry limit, then throw an error
-      throw new PackerError('Could not complete rectangle, retry limit reached');
     }
+    // try again with a different starting best guess
+    this.bestGuessTileHeight = this.initialBestGuessTileHeight =
+      this.initialBestGuessTileHeight / 2;
+
+    return this.calcTileProperties();
+    // } else {
+    //   // if we have reached the retry limit, then throw an error
+    //   throw new PackerError('Could not complete rectangle, retry limit reached');
+    // }
   }
 
   /**
@@ -838,6 +839,15 @@ class RectanglePacker {
 
   getWereTilesRemoved() {
     return this.removedTiles.length > 0;
+  }
+
+  isPrime(n) {
+    if (this.tiles.length < 2) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+      console.log(i, n % i);
+      if (n % i === 0) return false;
+    }
+    return true;
   }
 }
 

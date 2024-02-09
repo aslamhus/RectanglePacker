@@ -1,0 +1,42 @@
+{
+  "name": "rectanglepacker",
+  "version": "1.0.0",
+  "description": "heuristic algorithm for efficiently packing rectangles of a fixed aspect ratio into a defined space, addressing the NP-hard bin packing problem through iterative adjustment of tile sizes and arrangement.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test",
+    "start": "webpack serve --config './test/build/webpack.dev.js' --open",
+    "build": "webpack --config './test/build/webpack.prod.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aslamhus/RectanglePacker.git"
+  },
+  "keywords": [
+    "bin",
+    "packing",
+    "rectangle",
+    "packing",
+    "heuristic",
+    "algorithm"
+  ],
+  "author": "Aslam Husain <aslam.percy.husain@gmail.com> (https://github.com/aslamhus)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aslamhus/RectanglePacker/issues"
+  },
+  "homepage": "https://github.com/aslamhus/RectanglePacker#readme",
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.10.0"
+  },
+  "type": "module"
+}
