@@ -52,6 +52,8 @@ If you'd like to take the algorithm for a spin, you can find a testing applicati
 
 Play with different screen areas, numbers of tiles, gutter size, tile aspect ratio and more.
 
+\_\_\*Note on Gutter: the gutter may appear off by a pixel or two occasionally because the browser will round pixel values.
+
 ## License
 
 This Rectangle Packer class is licensed under the [MIT License](LICENSE). Feel free to use and modify it according to your needs.
