@@ -487,7 +487,6 @@ class RectanglePacker {
         // update best guess
         this.bestGuessTileHeight = this.bestGuessTileHeight + correction;
         // console log the try
-
         this.debug && console.log(`----- try #${this.tries.length}`, this.bestGuessTileHeight);
         this.debug && console.log('error', errorType, correction);
         if (this.bestGuessTileHeight < 1) {
@@ -844,7 +843,6 @@ class RectanglePacker {
   isPrime(n) {
     if (this.tiles.length < 2) return false;
     for (let i = 2; i <= Math.sqrt(n); i++) {
-      console.log(i, n % i);
       if (n % i === 0) return false;
     }
     return true;

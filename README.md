@@ -31,7 +31,7 @@ The heuristic can be further controlled and restricted by various options:
 ```javascript
 const packer = new RectanglePacker({
   screenArea: [800, 600],
-  tiles: new Array.from({ length: 20 }),
+  tiles: Array.from({ length: 20 }),
   tileAspectRatio: 0.75,
   gutter: 5,
   completeRectangle: false,
@@ -41,6 +41,12 @@ const packer = new RectanglePacker({
 const result = packer.calcTileProperties();
 console.log(result);
 ```
+
+## Potential Improvements
+
+### Simulated Annealing algoirthm
+
+Implement a simulated annealing approach - run the heuristic multiple times with different starting best guesses. Then create a method to measure the viability of the solutions, finally choosing the best. Currently, the heuristic iterates downwards from a large best guess, reducing the number of columns represented by the best guess tile height until a solution is found. This means that the optimal solution is sometimes missed.
 
 ## Test the RectanglePacker online
 
