@@ -2,14 +2,7 @@
  * # Rectangle Packer v2.0.0
  * by @aslamhus
  *
- * ## Developer Notes
  *
- * ### Potential Improvements
- *
- * Try a simulated annealing approach - run the heuristic multiple times with different starting best guesses
- * Then create a method to measure the viability of the solution, choosing the best solution
- * This might avoid the problem of getting stuck in a local minimum. Currently, the heuristic
- * iterates downwards, reducing the number of columns represented by the best guess tile height.
  *
  *
  * ## Introduction
@@ -60,14 +53,11 @@
  *  i.e. all rows will be full. Complete rectangle option is not always possible, especially if the number of tiles is prime.
  * If you enable canRemoveTiles, then the heuristic will remove tiles until the rectangle is complete.
  *
- * ### Tries vs Retries
+ * ### Tries
  *
  * The try limit is the maximum number of tries before the heuristic gives up
  * A try is defined as a single attempt to calculate the tile properties with a correction
  * based on the last error.
- *
- * Note that the try limit is reset for each retry. A retry is whe
- *
  *
  *
  *
@@ -115,7 +105,6 @@ class RectanglePacker {
     completeRectangle,
     canRemoveTiles,
     tryLimit,
-    retryLimit,
     debug = true,
   }) {
     if (!screenArea) throw new Error('screenArea is required');
@@ -139,8 +128,6 @@ class RectanglePacker {
     this.tries = [];
     this.tryLimit = tryLimit ?? 1000;
     // default try lmit is 800
-    this.retries = 0;
-    this.retryLimit = retryLimit ?? 40;
     this.performanceStartTime = 0;
     this.performanceLimit = 1000;
     this.correctionStep = 0.1;
@@ -423,6 +410,17 @@ class RectanglePacker {
     }
   }
 
+  validateColumnConstraintIsSatisfied(properties) {
+    if (this.columns > 0 && properties && properties.columns !== this.columns) {
+      throw new PackerError('Could not satisfy columns constraint', {
+        guess: this.bestGuessTileHeight,
+        predicate: `properties.columns (${properties.columns}) !== this.columns (${this.columns})`,
+        data: { 'properties.columns': properties, 'this.columns': this.columns },
+        discrepancy: [properties.columns - this.columns],
+      });
+    }
+  }
+
   validateTryLimit() {
     if (this.tryLimit && this.tries.length == this.tryLimit) {
       this.debug && console.error('try limit reached', this.tries.length);
@@ -466,14 +464,7 @@ class RectanglePacker {
         // throw error if tiles are below or above minimum tile height/width and maximum tile height/width
         this.validateTilesObeyMinMax(properties);
         // validate the column number is correct (if set)
-        if (this.columns > 0 && properties && properties.columns !== this.columns) {
-          throw new PackerError('Could not satisfy columns constraint', {
-            guess: this.bestGuessTileHeight,
-            predicate: `properties.columns (${properties.columns}) !== this.columns (${this.columns})`,
-            data: { 'properties.columns': properties, 'this.columns': this.columns },
-            discrepancy: [properties.columns - this.columns],
-          });
-        }
+        this.validateColumnConstraintIsSatisfied(properties);
       } catch (error) {
         // handle errors, continue with new guess
         [correction, errorType] = this.handleHeuristicError(error, lastError, properties);
@@ -486,7 +477,7 @@ class RectanglePacker {
         lastError = error;
         // update best guess
         this.bestGuessTileHeight = this.bestGuessTileHeight + correction;
-        // console log the try
+        // console log debug info on try
         this.debug && console.log(`----- try #${this.tries.length}`, this.bestGuessTileHeight);
         this.debug && console.log('error', errorType, correction);
         if (this.bestGuessTileHeight < 1) {
@@ -504,7 +495,6 @@ class RectanglePacker {
       }
 
       // push error data to tries last index
-
       this.logTryData(errorType, correction, errorDescription);
     }
     // end heuristic
@@ -513,7 +503,7 @@ class RectanglePacker {
       // if the rectangle is not complete, then try again
       if (!this.validateRectangleIsComplete(properties)) {
         // try again with new guess or remove tiles (if enabled)
-        return this.tryCompletingRectangle(properties);
+        return this.tryCompletingRectangle();
       }
     }
     // after successful calculation, calculate tile positions
@@ -629,7 +619,7 @@ class RectanglePacker {
    * @returns {number} correction
    */
   calcCorrectionForNewColumnValue(properties, newColumns) {
-    const [newTileWidth, newTileHeight] = this.calcTileDimensionsFromColumns(newColumns);
+    const [, newTileHeight] = this.calcTileDimensionsFromColumns(newColumns);
 
     return newTileHeight - this.bestGuessTileHeight;
   }
@@ -643,11 +633,8 @@ class RectanglePacker {
    * @param {*} properties
    * @returns
    */
-  tryCompletingRectangle(properties) {
-    console.log('retrying', this.retries, this.retryLimit);
-    // if (this.try < this.retryLimit) {
+  tryCompletingRectangle() {
     this.tries = [];
-    // this.retries++;
     // if remove tiles is enabled, then remove tiles and try again with same best guess
     if (this.canRemoveTiles) {
       this.removeTile();
@@ -659,10 +646,6 @@ class RectanglePacker {
       this.initialBestGuessTileHeight / 2;
 
     return this.calcTileProperties();
-    // } else {
-    //   // if we have reached the retry limit, then throw an error
-    //   throw new PackerError('Could not complete rectangle, retry limit reached');
-    // }
   }
 
   /**
