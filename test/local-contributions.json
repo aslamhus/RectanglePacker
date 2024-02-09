@@ -1,0 +1,1462 @@
+[
+  {
+    "memoryItems": [
+      {
+        "_id": "9132d5c1-12f3-476d-9305-c8d07aad0dd4",
+        "_owner": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "_createdDate": "Fri Jul 14 2023 14:37:01 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Fri Jul 14 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 03 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 16:20:31 GMT-0700 (Pacific Daylight Time)",
+        "country": "Canada",
+        "moderationItem": "62b960eb-dd36-4be7-938c-004125009739",
+        "lastName": "Doggy",
+        "firstName": "Sausage",
+        "memberId": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "itemName": "Kasim  Husain's memory of Sausage",
+        "mediaId": "ed9a7b75-972e-429f-93ab-68c4c8181f2f",
+        "memory": "One day sausage doggy ate a whole cake and slept for 24 hours. He was so happy. "
+      }
+    ],
+    "_id": "60d6d092-4551-4072-a857-d6ef9db9237b",
+    "_owner": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+    "_createdDate": "Tue Jul 11 2023 20:44:38 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:24:16 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "420f1846-d66c-4c0d-8aa0-ddde551cd2ef",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689294712/covid-19-grief-project/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/vigil.mp4",
+        "assetId": "dcfa239f195d4faae933c70aba353157",
+        "_id": "9205bbc1-1494-4689-9bd3-f90d96561fcf",
+        "_owner": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "_createdDate": "Tue Jul 11 2023 20:46:31 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689982206/covid-19-grief-project/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/vigil",
+        "_updatedDate": "Fri Jul 21 2023 16:31:48 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "191",
+            "scale": "0.492",
+            "h": 898,
+            "w": 720
+          },
+          "time": {
+            "in": 5.737164893617022,
+            "out": 20.700853195028103
+          }
+        },
+        "memberId": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689970181/covid-19-grief-project/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4.mp4",
+        "assetId": "69c073367c60d7b0e00690d9babf2d58",
+        "_id": "ed9a7b75-972e-429f-93ab-68c4c8181f2f",
+        "_owner": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "_createdDate": "Fri Jul 21 2023 13:09:53 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689981629/covid-19-grief-project/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.mp4",
+        "publicId": "covid-19-grief-project/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4",
+        "_updatedDate": "Fri Jul 21 2023 16:22:15 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "64",
+            "y": "0",
+            "scale": "1.843",
+            "h": 239,
+            "w": 192
+          },
+          "time": {
+            "in": 0.7917553191489362,
+            "out": 15.669526656130525
+          }
+        },
+        "memberId": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xSmallPoster-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/medium-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/smallPoster-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/small-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xSmall-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xLarge-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/mediumPoster-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/large-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/xLargePoster-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/ef4d8eb5-96b4-4acd-b59c-89cff9d3252d/largePoster-memory-9132d5c1-12f3-476d-9305-c8d07aad0dd4-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+    "title": "kolewe8942's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "2ff9489e-3953-48ef-b8b7-c53d2adefc51",
+        "_owner": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "_createdDate": "Tue Jul 11 2023 20:45:39 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:56:07 GMT-0700 (Pacific Daylight Time)",
+        "country": "Denmark",
+        "lastName": "Veldstra",
+        "firstName": "Carolyn",
+        "memberId": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d"
+      },
+      {
+        "_id": "e416f633-beb4-4370-b592-d25e302626aa",
+        "_owner": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d",
+        "_createdDate": "Tue Jul 11 2023 20:45:31 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:53:18 GMT-0700 (Pacific Daylight Time)",
+        "country": "Pakistan",
+        "lastName": "Husain",
+        "firstName": "Kasim",
+        "memberId": "ef4d8eb5-96b4-4acd-b59c-89cff9d3252d"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "2f45e615-bd57-461f-ac09-e782ed34ae83",
+        "_owner": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+        "_createdDate": "Mon Jul 17 2023 18:03:07 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Thu Jul 06 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Fri Jul 03 2015 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 19:04:26 GMT-0700 (Pacific Daylight Time)",
+        "country": "American Samoa",
+        "moderationItem": "441451d2-55ec-4efb-8833-a31675dc7852",
+        "lastName": "Lewis",
+        "firstName": "Rosemary ",
+        "memberId": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+        "itemName": "Ryan Say's memory of Rosemary ",
+        "mediaId": "b2023a27-19c3-424f-a70b-9d89606c6b72",
+        "memory": "Rosemary loved animals and used to spend all her time with them. She loved her dog Spot in particular, and we went on many walks together."
+      }
+    ],
+    "_id": "a6592d73-9793-4eee-8082-298b76c98e0f",
+    "_owner": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+    "_createdDate": "Tue Jul 11 2023 14:53:52 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:24:30 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "f02e81f7-2f77-4023-bc60-a58bd87ce6df",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689294945/covid-19-grief-project/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/vigil.mp4",
+        "assetId": "81769b0567339579880cf5e0f8c05658",
+        "_id": "e37f81b4-a0ea-4093-b0a5-e9ef5c1e0aa5",
+        "_owner": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+        "_createdDate": "Tue Jul 11 2023 14:56:31 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991298/covid-19-grief-project/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/vigil",
+        "_updatedDate": "Fri Jul 21 2023 19:17:57 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "172",
+            "scale": "0.737",
+            "h": 598,
+            "w": 480
+          },
+          "time": {
+            "in": 4.048625,
+            "out": 18.0567900390625
+          }
+        },
+        "memberId": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mov",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689642228/covid-19-grief-project/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/memory-2f45e615-bd57-461f-ac09-e782ed34ae83.mov",
+        "assetId": "9ea3d773a0b1fa970a88ea7a6fe68782",
+        "_id": "b2023a27-19c3-424f-a70b-9d89606c6b72",
+        "_owner": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+        "_createdDate": "Mon Jul 17 2023 18:05:29 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991459/covid-19-grief-project/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.mov",
+        "publicId": "covid-19-grief-project/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/memory-2f45e615-bd57-461f-ac09-e782ed34ae83",
+        "_updatedDate": "Fri Jul 21 2023 19:06:11 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "264",
+            "scale": "0.354",
+            "h": 1247,
+            "w": 1000
+          },
+          "time": {
+            "in": 0.15562499999999999,
+            "out": 14.714688549041748
+          }
+        },
+        "memberId": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xSmallPoster-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/medium-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.mov",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/smallPoster-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/small-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.mov",
+          "xSmall": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xSmall-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.mov",
+          "xLarge": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xLarge-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.mov",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/mediumPoster-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/large-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.mov",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/xLargePoster-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394/largePoster-memory-2f45e615-bd57-461f-ac09-e782ed34ae83-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+    "title": "lelev15870's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "44c8e741-6afd-4ab3-b074-577ad41166bd",
+        "_owner": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394",
+        "_createdDate": "Tue Jul 11 2023 14:54:44 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:54:39 GMT-0700 (Pacific Daylight Time)",
+        "country": "Canada",
+        "lastName": "Say",
+        "firstName": "Ryan",
+        "memberId": "7fdfe6f8-681e-4d6e-a8f0-7d86a4df6394"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "16b8d3a7-7604-4b1d-9dec-cbca5ec38a71",
+        "_owner": "83f7afb5-6d77-43a4-be53-714222737e58",
+        "_createdDate": "Mon Jul 17 2023 18:14:03 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Sat Jul 09 2022 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 19:00:48 GMT-0700 (Pacific Daylight Time)",
+        "country": "Australia",
+        "moderationItem": "23dfb79b-7ca2-4a68-a369-5643b9899fd8",
+        "lastName": "Lemur",
+        "firstName": "Lara",
+        "memberId": "83f7afb5-6d77-43a4-be53-714222737e58",
+        "itemName": "Gill Ellis's memory of Lara",
+        "mediaId": "4a6e6dd7-4348-4c0c-a514-759666b93520",
+        "memory": "Lara was a brilliant, funny person. She had the best laugh and I remember spending hours together laughing about anything and everything. "
+      }
+    ],
+    "_id": "c8949625-4122-4384-af11-873da0d60055",
+    "_owner": "83f7afb5-6d77-43a4-be53-714222737e58",
+    "_createdDate": "Wed Jul 05 2023 22:18:22 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:24:38 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "2d301776-5f40-4828-a921-a3afe74d0243",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689295098/covid-19-grief-project/83f7afb5-6d77-43a4-be53-714222737e58/vigil.mp4",
+        "assetId": "47749083b6c5f57e583479c546dffa15",
+        "_id": "06eae462-853a-4532-9fdf-7e2225c90c1a",
+        "_owner": "83f7afb5-6d77-43a4-be53-714222737e58",
+        "_createdDate": "Wed Jul 05 2023 22:19:28 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991223/covid-19-grief-project/83f7afb5-6d77-43a4-be53-714222737e58/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/83f7afb5-6d77-43a4-be53-714222737e58/vigil",
+        "_updatedDate": "Fri Jul 21 2023 19:02:58 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "9",
+            "y": "16",
+            "scale": "0.505",
+            "h": 874,
+            "w": 702
+          },
+          "time": {
+            "in": 0,
+            "out": 12.666448715696944
+          }
+        },
+        "memberId": "83f7afb5-6d77-43a4-be53-714222737e58",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689642967/covid-19-grief-project/83f7afb5-6d77-43a4-be53-714222737e58/memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71.mp4",
+        "assetId": "1db939bf633408e1a1c7c6e18d918d22",
+        "_id": "4a6e6dd7-4348-4c0c-a514-759666b93520",
+        "_owner": "83f7afb5-6d77-43a4-be53-714222737e58",
+        "_createdDate": "Mon Jul 17 2023 18:17:16 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991246/covid-19-grief-project/83f7afb5-6d77-43a4-be53-714222737e58/memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.mp4",
+        "publicId": "covid-19-grief-project/83f7afb5-6d77-43a4-be53-714222737e58/memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71",
+        "_updatedDate": "Fri Jul 21 2023 19:02:01 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "100",
+            "scale": "1.005",
+            "h": 439,
+            "w": 352
+          },
+          "time": {
+            "in": 0.021099734042553192,
+            "out": 8.416882105928787
+          }
+        },
+        "memberId": "83f7afb5-6d77-43a4-be53-714222737e58",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xSmallPoster-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/medium-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/smallPoster-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/small-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xSmall-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xLarge-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/mediumPoster-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/large-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/xLargePoster-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/83f7afb5-6d77-43a4-be53-714222737e58/largePoster-memory-16b8d3a7-7604-4b1d-9dec-cbca5ec38a71-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "83f7afb5-6d77-43a4-be53-714222737e58",
+    "title": "radef14592's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "59a77814-9028-42cb-a4f7-c899e15863b1",
+        "_owner": "83f7afb5-6d77-43a4-be53-714222737e58",
+        "_createdDate": "Wed Jul 05 2023 22:18:37 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:54:45 GMT-0700 (Pacific Daylight Time)",
+        "country": "United Kingdom",
+        "lastName": "Ellis",
+        "firstName": "Gill",
+        "memberId": "83f7afb5-6d77-43a4-be53-714222737e58"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "f70ed341-34cf-4ed2-b2dd-983037c647f8",
+        "_owner": "f322f340-3318-40cd-8a09-875b16ae3284",
+        "_createdDate": "Mon Jul 17 2023 18:21:24 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Thu Jul 06 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Fri Mar 03 2023 00:00:00 GMT-0800 (Pacific Standard Time)",
+        "_updatedDate": "Fri Jul 21 2023 19:07:19 GMT-0700 (Pacific Daylight Time)",
+        "country": "Bulgaria",
+        "moderationItem": "b7439554-211c-4dfc-9c51-3c57b8b3cdd5",
+        "lastName": "John",
+        "firstName": "Jake",
+        "memberId": "f322f340-3318-40cd-8a09-875b16ae3284",
+        "itemName": "Anne Gorsuch's memory of Jake",
+        "mediaId": "16479c1a-569f-4179-bc2a-83a393c7ff72",
+        "memory": "Jake loved his pet lizard so much, they were the best of buddies. They went on many adventures together and were both super big-hearted and chill."
+      }
+    ],
+    "_id": "fd69df05-cfc8-4346-9689-ed2677a5b2d7",
+    "_owner": "f322f340-3318-40cd-8a09-875b16ae3284",
+    "_createdDate": "Wed Jul 05 2023 21:54:21 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:24:45 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "7dda2562-76bf-4513-9aba-462bee3910e2",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689295306/covid-19-grief-project/f322f340-3318-40cd-8a09-875b16ae3284/vigil.mp4",
+        "assetId": "4ed4ef35ff640d29329fdab030be57fe",
+        "_id": "32c9a41f-ae7f-47e6-9bab-c838f856f0f6",
+        "_owner": "f322f340-3318-40cd-8a09-875b16ae3284",
+        "_createdDate": "Wed Jul 05 2023 21:55:03 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991602/covid-19-grief-project/f322f340-3318-40cd-8a09-875b16ae3284/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/f322f340-3318-40cd-8a09-875b16ae3284/vigil",
+        "_updatedDate": "Fri Jul 21 2023 19:08:39 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "125",
+            "scale": "0.737",
+            "h": 598,
+            "w": 480
+          },
+          "time": {
+            "in": 0.7094414893617021,
+            "out": 14.035160188066198
+          }
+        },
+        "memberId": "f322f340-3318-40cd-8a09-875b16ae3284",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689643306/covid-19-grief-project/f322f340-3318-40cd-8a09-875b16ae3284/memory-f70ed341-34cf-4ed2-b2dd-983037c647f8.mp4",
+        "assetId": "c172beca7d7df55094fc6f71fd763690",
+        "_id": "16479c1a-569f-4179-bc2a-83a393c7ff72",
+        "_owner": "f322f340-3318-40cd-8a09-875b16ae3284",
+        "_createdDate": "Mon Jul 17 2023 18:22:02 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991635/covid-19-grief-project/f322f340-3318-40cd-8a09-875b16ae3284/memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.mp4",
+        "publicId": "covid-19-grief-project/f322f340-3318-40cd-8a09-875b16ae3284/memory-f70ed341-34cf-4ed2-b2dd-983037c647f8",
+        "_updatedDate": "Fri Jul 21 2023 19:09:09 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "191",
+            "scale": "0.492",
+            "h": 898,
+            "w": 720
+          },
+          "time": {
+            "in": 0.10386436170212765,
+            "out": 11.158
+          }
+        },
+        "memberId": "f322f340-3318-40cd-8a09-875b16ae3284",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xSmallPoster-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/medium-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/smallPoster-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/small-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xSmall-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xLarge-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/mediumPoster-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/large-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/xLargePoster-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/f322f340-3318-40cd-8a09-875b16ae3284/largePoster-memory-f70ed341-34cf-4ed2-b2dd-983037c647f8-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "f322f340-3318-40cd-8a09-875b16ae3284",
+    "title": "payejac510's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "eed9e071-fabc-4c41-aa34-3ba3edf59964",
+        "_owner": "f322f340-3318-40cd-8a09-875b16ae3284",
+        "_createdDate": "Wed Jul 05 2023 21:54:35 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:54:50 GMT-0700 (Pacific Daylight Time)",
+        "country": "United States",
+        "lastName": "Gorsuch",
+        "firstName": "Anne",
+        "memberId": "f322f340-3318-40cd-8a09-875b16ae3284"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a",
+        "_owner": "5849d562-1f69-453c-844b-c4e41ddf1131",
+        "_createdDate": "Mon Jul 17 2023 18:25:35 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Fri Jul 14 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Sat Jul 06 2019 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:58:52 GMT-0700 (Pacific Daylight Time)",
+        "country": "Croatia",
+        "moderationItem": "ddbc0644-c442-4de1-8ebf-aa2fbd9b0c76",
+        "lastName": "Thomas",
+        "firstName": "Lindsay ",
+        "memberId": "5849d562-1f69-453c-844b-c4e41ddf1131",
+        "itemName": "Kenyon Alexander's memory of Lindsay ",
+        "mediaId": "e73d16cd-271d-488f-af43-a0961f5c6cc1",
+        "memory": "Lindsay was so creative and fun. She was a costume designer and taught me how to sew. "
+      }
+    ],
+    "_id": "6ccdd867-6304-4a4e-9a08-439d8f67763d",
+    "_owner": "5849d562-1f69-453c-844b-c4e41ddf1131",
+    "_createdDate": "Wed Jul 05 2023 21:52:21 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:24:52 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "cf4b6fbe-1eb1-43c6-804f-2677c23880f6",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689295401/covid-19-grief-project/5849d562-1f69-453c-844b-c4e41ddf1131/vigil.mp4",
+        "assetId": "55bcc1d487f67540841b9beae2fd9dea",
+        "_id": "c657b0dc-9720-4e23-8852-17cbd673eec2",
+        "_owner": "5849d562-1f69-453c-844b-c4e41ddf1131",
+        "_createdDate": "Wed Jul 05 2023 21:52:52 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991077/covid-19-grief-project/5849d562-1f69-453c-844b-c4e41ddf1131/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/5849d562-1f69-453c-844b-c4e41ddf1131/vigil",
+        "_updatedDate": "Fri Jul 21 2023 19:00:12 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "18",
+            "y": "213",
+            "scale": "0.517",
+            "h": 853,
+            "w": 684
+          },
+          "time": {
+            "in": 0,
+            "out": 15
+          }
+        },
+        "memberId": "5849d562-1f69-453c-844b-c4e41ddf1131",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689643556/covid-19-grief-project/5849d562-1f69-453c-844b-c4e41ddf1131/memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a.mp4",
+        "assetId": "e6cee3074a379300d72e4a1d4a1d0934",
+        "_id": "e73d16cd-271d-488f-af43-a0961f5c6cc1",
+        "_owner": "5849d562-1f69-453c-844b-c4e41ddf1131",
+        "_createdDate": "Mon Jul 17 2023 18:48:54 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991129/covid-19-grief-project/5849d562-1f69-453c-844b-c4e41ddf1131/memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.mp4",
+        "publicId": "covid-19-grief-project/5849d562-1f69-453c-844b-c4e41ddf1131/memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a",
+        "_updatedDate": "Fri Jul 21 2023 18:59:47 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "3",
+            "y": "138",
+            "scale": "0.750",
+            "h": 588,
+            "w": 471
+          },
+          "time": {
+            "in": 0,
+            "out": 11.982
+          }
+        },
+        "memberId": "5849d562-1f69-453c-844b-c4e41ddf1131",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xSmallPoster-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/medium-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/smallPoster-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/small-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xSmall-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xLarge-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/mediumPoster-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/large-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/xLargePoster-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/5849d562-1f69-453c-844b-c4e41ddf1131/largePoster-memory-96cbbf18-c380-4e3d-96fb-2b5cf7c7e04a-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "5849d562-1f69-453c-844b-c4e41ddf1131",
+    "title": "ridef76537's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "efb5c911-2838-4cc8-86b0-009bfb034d5b",
+        "_owner": "5849d562-1f69-453c-844b-c4e41ddf1131",
+        "_createdDate": "Wed Jul 05 2023 21:52:34 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:54:54 GMT-0700 (Pacific Daylight Time)",
+        "country": "Mexico",
+        "lastName": "Alexander",
+        "firstName": "Kenyon",
+        "memberId": "5849d562-1f69-453c-844b-c4e41ddf1131"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "30894c95-28b4-458c-bfc6-5cf08331dbfc",
+        "_owner": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+        "_createdDate": "Mon Jul 17 2023 18:53:37 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Fri Jul 01 2022 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:56:48 GMT-0700 (Pacific Daylight Time)",
+        "country": "United States",
+        "moderationItem": "e76d4f36-549e-4cca-8444-20677b4ee6a8",
+        "lastName": "Gray",
+        "firstName": "Graham",
+        "memberId": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+        "itemName": "Ellie Siden's memory of Graham",
+        "mediaId": "5306c848-bf32-407e-9db2-471ac1107f25",
+        "memory": "Graham was the life of the party and always brought people together. I loved how adventurous he was. "
+      }
+    ],
+    "_id": "f2252f72-f759-427f-a736-ce1f26260a96",
+    "_owner": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+    "_createdDate": "Wed Jul 05 2023 21:50:10 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:25:58 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "cbee5d5f-1e11-48fd-b855-9445523f0706",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689295495/covid-19-grief-project/9607ceb8-b9a3-4550-ad33-b88daec8cc50/vigil.mp4",
+        "assetId": "c2f3d417d1293cef1057058e3f09f5e6",
+        "_id": "8909aa36-c878-49fc-884c-1d16d406926d",
+        "_owner": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+        "_createdDate": "Wed Jul 05 2023 21:50:59 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990971/covid-19-grief-project/9607ceb8-b9a3-4550-ad33-b88daec8cc50/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/9607ceb8-b9a3-4550-ad33-b88daec8cc50/vigil",
+        "_updatedDate": "Fri Jul 21 2023 18:58:36 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "12",
+            "y": "133",
+            "scale": "0.509",
+            "h": 867,
+            "w": 696
+          },
+          "time": {
+            "in": 0.30059840425531914,
+            "out": 13.852260114791546
+          }
+        },
+        "memberId": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689645244/covid-19-grief-project/9607ceb8-b9a3-4550-ad33-b88daec8cc50/memory-30894c95-28b4-458c-bfc6-5cf08331dbfc.mp4",
+        "assetId": "4815667d21bf5e4db6706f89e4910f2d",
+        "_id": "5306c848-bf32-407e-9db2-471ac1107f25",
+        "_owner": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+        "_createdDate": "Mon Jul 17 2023 18:55:50 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689991005/covid-19-grief-project/9607ceb8-b9a3-4550-ad33-b88daec8cc50/memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.mp4",
+        "publicId": "covid-19-grief-project/9607ceb8-b9a3-4550-ad33-b88daec8cc50/memory-30894c95-28b4-458c-bfc6-5cf08331dbfc",
+        "_updatedDate": "Fri Jul 21 2023 18:59:37 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "1",
+            "y": "62",
+            "scale": "0.902",
+            "h": 489,
+            "w": 392
+          },
+          "time": {
+            "in": 0,
+            "out": 14.827086870721045
+          }
+        },
+        "memberId": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xSmallPoster-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/medium-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/smallPoster-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/small-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xSmall-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xLarge-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/mediumPoster-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/large-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/xLargePoster-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/9607ceb8-b9a3-4550-ad33-b88daec8cc50/largePoster-memory-30894c95-28b4-458c-bfc6-5cf08331dbfc-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+    "title": "pebawa8154's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "d282d31b-024d-423b-bb06-18235d4b1079",
+        "_owner": "9607ceb8-b9a3-4550-ad33-b88daec8cc50",
+        "_createdDate": "Wed Jul 05 2023 21:50:25 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:55:00 GMT-0700 (Pacific Daylight Time)",
+        "country": "Guatemala",
+        "lastName": "Siden",
+        "firstName": "Ellie",
+        "memberId": "9607ceb8-b9a3-4550-ad33-b88daec8cc50"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "9c524045-2648-416a-9c0e-0609412a8a2f",
+        "_owner": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+        "_createdDate": "Mon Jul 17 2023 18:58:41 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Tue Jul 04 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Sat Jul 07 2018 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:54:53 GMT-0700 (Pacific Daylight Time)",
+        "country": "Canada",
+        "moderationItem": "78c78a61-334b-4121-aa83-e339d76f0536",
+        "lastName": "Milton",
+        "firstName": "Mark",
+        "memberId": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+        "itemName": "Sal Siden's memory of Mark",
+        "mediaId": "6d327e0b-64df-459d-8790-22902073aee6",
+        "memory": "Mark was quiet and musical and a kind person. We spent many evenings playing guitar together."
+      }
+    ],
+    "_id": "c8415500-0e24-4b16-99e4-c2b224912d3e",
+    "_owner": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+    "_createdDate": "Wed Jul 05 2023 21:47:44 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:25:51 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "b90da179-1d42-44c9-a85c-59483e4a9b70",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689295614/covid-19-grief-project/39c11d73-1f9d-49bd-a300-ed459aa9ab64/vigil.mp4",
+        "assetId": "27e251df145183bd05d3a10d6a818e12",
+        "_id": "5eae2e9f-3993-4903-b014-61b8542d83f6",
+        "_owner": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+        "_createdDate": "Wed Jul 05 2023 21:48:37 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990842/covid-19-grief-project/39c11d73-1f9d-49bd-a300-ed459aa9ab64/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/39c11d73-1f9d-49bd-a300-ed459aa9ab64/vigil",
+        "_updatedDate": "Fri Jul 21 2023 18:57:30 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "64",
+            "scale": "1.128",
+            "h": 391,
+            "w": 314
+          },
+          "time": {
+            "in": 3.7113284574468084,
+            "out": 15.69219414893617
+          }
+        },
+        "memberId": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689645538/covid-19-grief-project/39c11d73-1f9d-49bd-a300-ed459aa9ab64/memory-9c524045-2648-416a-9c0e-0609412a8a2f.mp4",
+        "assetId": "f6e7154001a74893bbb3c282c56bf713",
+        "_id": "6d327e0b-64df-459d-8790-22902073aee6",
+        "_owner": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+        "_createdDate": "Mon Jul 17 2023 18:59:12 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990892/covid-19-grief-project/39c11d73-1f9d-49bd-a300-ed459aa9ab64/memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.mp4",
+        "publicId": "covid-19-grief-project/39c11d73-1f9d-49bd-a300-ed459aa9ab64/memory-9c524045-2648-416a-9c0e-0609412a8a2f",
+        "_updatedDate": "Fri Jul 21 2023 18:57:26 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "52",
+            "y": "166",
+            "scale": "0.942",
+            "h": 468,
+            "w": 376
+          },
+          "time": {
+            "in": 0,
+            "out": 5.142
+          }
+        },
+        "memberId": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xSmallPoster-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/medium-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/smallPoster-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/small-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xSmall-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xLarge-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/mediumPoster-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/large-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/xLargePoster-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/39c11d73-1f9d-49bd-a300-ed459aa9ab64/largePoster-memory-9c524045-2648-416a-9c0e-0609412a8a2f-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+    "title": "kogijo1668's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "65dd969d-acb7-445d-8f69-90ceeeb21f2f",
+        "_owner": "39c11d73-1f9d-49bd-a300-ed459aa9ab64",
+        "_createdDate": "Wed Jul 05 2023 21:47:57 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:55:03 GMT-0700 (Pacific Daylight Time)",
+        "country": "Brazil",
+        "lastName": "Siden",
+        "firstName": "Sal",
+        "memberId": "39c11d73-1f9d-49bd-a300-ed459aa9ab64"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "31fc9d71-cfa4-4e23-ac7f-28a8e8196b52",
+        "_owner": "85f92873-0627-4598-836e-ab7a5f786a2d",
+        "_createdDate": "Mon Jul 17 2023 19:02:25 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Fri Jul 09 2021 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:53:11 GMT-0700 (Pacific Daylight Time)",
+        "country": "France",
+        "moderationItem": "2cca30b7-d3e2-400b-91c0-90048860916f",
+        "lastName": "Low",
+        "firstName": "Leah",
+        "memberId": "85f92873-0627-4598-836e-ab7a5f786a2d",
+        "itemName": "Shaukat Husain's memory of Leah",
+        "mediaId": "4e244aaa-aac4-464c-a005-42aa1137e6c3",
+        "memory": "Leah was a brilliant soul and a fantastic musician. My proudest moments were watching her perform."
+      }
+    ],
+    "_id": "3f12fee7-a266-4dbc-b84b-7c73518d77a5",
+    "_owner": "85f92873-0627-4598-836e-ab7a5f786a2d",
+    "_createdDate": "Wed Jul 05 2023 21:43:26 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:25:45 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "04190dd4-98f2-456f-ac69-aebab01e65ab",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689295861/covid-19-grief-project/85f92873-0627-4598-836e-ab7a5f786a2d/vigil.mp4",
+        "assetId": "3a4f7c1b665588b91e0e8e3ad152fa7f",
+        "_id": "bbe958c9-ae8e-469d-8c02-2795ed5cef4f",
+        "_owner": "85f92873-0627-4598-836e-ab7a5f786a2d",
+        "_createdDate": "Wed Jul 05 2023 21:44:42 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990736/covid-19-grief-project/85f92873-0627-4598-836e-ab7a5f786a2d/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/85f92873-0627-4598-836e-ab7a5f786a2d/vigil",
+        "_updatedDate": "Fri Jul 21 2023 18:54:58 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "62",
+            "y": "197",
+            "scale": "0.448",
+            "h": 985,
+            "w": 790
+          },
+          "time": {
+            "in": 0.345498670212766,
+            "out": 9.518087700620612
+          }
+        },
+        "memberId": "85f92873-0627-4598-836e-ab7a5f786a2d",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689645811/covid-19-grief-project/85f92873-0627-4598-836e-ab7a5f786a2d/memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52.mp4",
+        "assetId": "ae8d46e64fb9d57d7e47983f29c516e6",
+        "_id": "4e244aaa-aac4-464c-a005-42aa1137e6c3",
+        "_owner": "85f92873-0627-4598-836e-ab7a5f786a2d",
+        "_createdDate": "Mon Jul 17 2023 19:03:47 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990786/covid-19-grief-project/85f92873-0627-4598-836e-ab7a5f786a2d/memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.mp4",
+        "publicId": "covid-19-grief-project/85f92873-0627-4598-836e-ab7a5f786a2d/memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52",
+        "_updatedDate": "Fri Jul 21 2023 18:55:29 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": "null",
+        "memberId": "85f92873-0627-4598-836e-ab7a5f786a2d",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xSmallPoster-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/medium-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/smallPoster-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/small-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xSmall-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xLarge-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/mediumPoster-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/large-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/xLargePoster-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/85f92873-0627-4598-836e-ab7a5f786a2d/largePoster-memory-31fc9d71-cfa4-4e23-ac7f-28a8e8196b52-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "85f92873-0627-4598-836e-ab7a5f786a2d",
+    "title": "wimemot125's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "15de8cff-6e9c-45c5-9b0e-760627e5cc48",
+        "_owner": "85f92873-0627-4598-836e-ab7a5f786a2d",
+        "_createdDate": "Wed Jul 05 2023 21:43:39 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:55:08 GMT-0700 (Pacific Daylight Time)",
+        "country": "Pakistan",
+        "lastName": "Husain",
+        "firstName": "Shaukat",
+        "memberId": "85f92873-0627-4598-836e-ab7a5f786a2d"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "f547755c-2dfa-4fe7-a86b-721c7146b406",
+        "_owner": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+        "_createdDate": "Mon Jul 17 2023 19:07:05 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Thu Jul 13 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:50:47 GMT-0700 (Pacific Daylight Time)",
+        "country": "Canada",
+        "moderationItem": "c0860137-1081-4b8c-9b65-ab49eb32a56e",
+        "lastName": "Mae",
+        "firstName": "Molly",
+        "memberId": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+        "itemName": "Ira Cooper's memory of Molly",
+        "mediaId": "268ee51e-1fb9-4b1b-b732-96f8d97e48b9",
+        "memory": "Molly was a joyful, warm person. We loved doing pottery together and met in a pottery class."
+      }
+    ],
+    "_id": "59d66ef9-f6cb-4547-b971-8f5804299825",
+    "_owner": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+    "_createdDate": "Wed Jul 05 2023 21:40:56 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:25:40 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "f177cb88-edc1-4808-9766-8aa61e92e592",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689296050/covid-19-grief-project/b37c2545-356c-4ac5-b554-02e24ec833a4/vigil.mp4",
+        "assetId": "0db560ef414199eb596391b9c3e220ff",
+        "_id": "ee41424c-a3c7-4e21-b216-891f06be4a77",
+        "_owner": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+        "_createdDate": "Wed Jul 05 2023 21:41:58 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990621/covid-19-grief-project/b37c2545-356c-4ac5-b554-02e24ec833a4/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/b37c2545-356c-4ac5-b554-02e24ec833a4/vigil",
+        "_updatedDate": "Fri Jul 21 2023 18:51:58 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "7",
+            "y": "0",
+            "scale": "1.041",
+            "h": 424,
+            "w": 340
+          },
+          "time": {
+            "in": 7.6736728723404255,
+            "out": 22.45902389461436
+          }
+        },
+        "memberId": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689646043/covid-19-grief-project/b37c2545-356c-4ac5-b554-02e24ec833a4/memory-f547755c-2dfa-4fe7-a86b-721c7146b406.mp4",
+        "assetId": "0ffc0c90d5210e6e310da7963420914c",
+        "_id": "268ee51e-1fb9-4b1b-b732-96f8d97e48b9",
+        "_owner": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+        "_createdDate": "Mon Jul 17 2023 19:08:26 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990645/covid-19-grief-project/b37c2545-356c-4ac5-b554-02e24ec833a4/memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.mp4",
+        "publicId": "covid-19-grief-project/b37c2545-356c-4ac5-b554-02e24ec833a4/memory-f547755c-2dfa-4fe7-a86b-721c7146b406",
+        "_updatedDate": "Fri Jul 21 2023 18:52:14 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "100",
+            "scale": "1.005",
+            "h": 439,
+            "w": 352
+          },
+          "time": {
+            "in": 1.9998669701434197,
+            "out": 12.097579787234043
+          }
+        },
+        "memberId": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xSmallPoster-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/medium-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/smallPoster-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/small-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xSmall-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xLarge-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/mediumPoster-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/large-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/xLargePoster-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/b37c2545-356c-4ac5-b554-02e24ec833a4/largePoster-memory-f547755c-2dfa-4fe7-a86b-721c7146b406-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+    "title": "vonena4960's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "5424c34e-c424-4304-81c8-50dd550b16cc",
+        "_owner": "b37c2545-356c-4ac5-b554-02e24ec833a4",
+        "_createdDate": "Wed Jul 05 2023 21:41:11 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:55:12 GMT-0700 (Pacific Daylight Time)",
+        "country": "Israel",
+        "lastName": "Cooper",
+        "firstName": "Ira",
+        "memberId": "b37c2545-356c-4ac5-b554-02e24ec833a4"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "178bc017-131a-4e8e-bb47-9d1a86dab74d",
+        "_owner": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+        "_createdDate": "Mon Jul 17 2023 19:28:54 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Sat Jul 16 2022 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:09:43 GMT-0700 (Pacific Daylight Time)",
+        "country": "United States",
+        "moderationItem": "3f39283f-b141-4d76-8c60-085207319e17",
+        "lastName": "Diggs",
+        "firstName": "Dan",
+        "memberId": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+        "itemName": "Robert Bailey's memory of Dan",
+        "mediaId": "ba6a6699-4748-49c8-bef5-2186057a03c1",
+        "memory": "Dan was such a kind, smart person. He was always up to play a joke on people and was loyal to a fault."
+      }
+    ],
+    "_id": "980c02c3-aff0-45bd-b0b3-1fb8d2e3c3c8",
+    "_owner": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+    "_createdDate": "Wed Jul 05 2023 21:35:32 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:25:34 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "102880c1-71ab-4e42-bf40-d092dc26a616",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689296149/covid-19-grief-project/585d4150-5f37-4e0b-b7ec-340d47fbde6a/vigil.mp4",
+        "assetId": "0875ef3a4913749715a025b0303515f7",
+        "_id": "92cac855-e82a-4393-a6fa-84a696bb5bb0",
+        "_owner": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+        "_createdDate": "Wed Jul 05 2023 21:36:41 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689988037/covid-19-grief-project/585d4150-5f37-4e0b-b7ec-340d47fbde6a/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/585d4150-5f37-4e0b-b7ec-340d47fbde6a/vigil",
+        "_updatedDate": "Fri Jul 21 2023 18:11:02 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "125",
+            "scale": "0.737",
+            "h": 598,
+            "w": 480
+          },
+          "time": {
+            "in": 2.933178191489362,
+            "out": 14.342874709109044
+          }
+        },
+        "memberId": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689647915/covid-19-grief-project/585d4150-5f37-4e0b-b7ec-340d47fbde6a/memory-178bc017-131a-4e8e-bb47-9d1a86dab74d.mp4",
+        "assetId": "23b1ca4c7752140d4ce8353e0351e822",
+        "_id": "ba6a6699-4748-49c8-bef5-2186057a03c1",
+        "_owner": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+        "_createdDate": "Mon Jul 17 2023 19:32:59 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689988181/covid-19-grief-project/585d4150-5f37-4e0b-b7ec-340d47fbde6a/memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.mp4",
+        "publicId": "covid-19-grief-project/585d4150-5f37-4e0b-b7ec-340d47fbde6a/memory-178bc017-131a-4e8e-bb47-9d1a86dab74d",
+        "_updatedDate": "Fri Jul 21 2023 18:12:06 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "42",
+            "y": "86",
+            "scale": "1.000",
+            "h": 441,
+            "w": 354
+          },
+          "time": {
+            "in": 0,
+            "out": 6.6
+          }
+        },
+        "memberId": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xSmallPoster-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/medium-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/smallPoster-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/small-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xSmall-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xLarge-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/mediumPoster-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/large-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/xLargePoster-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/585d4150-5f37-4e0b-b7ec-340d47fbde6a/largePoster-memory-178bc017-131a-4e8e-bb47-9d1a86dab74d-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+    "title": "wasikeb489's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "cf5ec750-dc8e-4dc4-a670-6c82ed341bbd",
+        "_owner": "585d4150-5f37-4e0b-b7ec-340d47fbde6a",
+        "_createdDate": "Wed Jul 05 2023 21:35:52 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:55:19 GMT-0700 (Pacific Daylight Time)",
+        "country": "Sweden",
+        "lastName": "Bailey",
+        "firstName": "Robert",
+        "memberId": "585d4150-5f37-4e0b-b7ec-340d47fbde6a"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "c563b64a-2501-4257-93f6-761985c6e690",
+        "_owner": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "_createdDate": "Mon Jul 17 2023 19:11:19 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:48:59 GMT-0700 (Pacific Daylight Time)",
+        "country": "Algeria",
+        "moderationItem": "bc36dec7-0b6f-458e-aed0-6d96ba15c8f3",
+        "lastName": "So",
+        "firstName": "Melissa",
+        "memberId": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "itemName": "Johnny The Great's memory of Melissa",
+        "mediaId": "ec0d67e9-61a3-4693-a312-a071990b4389",
+        "memory": "Melissa was a goofy, sweet person and I loved her laugh. She always had time for a chat and we had many good times."
+      }
+    ],
+    "_id": "2017dabd-8406-478c-8d3a-5759a7f6d45e",
+    "_owner": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+    "_createdDate": "Wed Jul 05 2023 21:13:32 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:25:30 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "0bfdb4e0-59ca-4a64-8a5d-f1b4e9fc9ffc",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689296383/covid-19-grief-project/6fc4af8b-b8cf-460a-8bed-14a1766182d3/vigil.mp4",
+        "assetId": "59f78ef7dff36649dd40db39c32e275b",
+        "_id": "eee083b7-e2c9-440b-9fda-12b0db0455bf",
+        "_owner": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "_createdDate": "Wed Jul 05 2023 21:15:23 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990469/covid-19-grief-project/6fc4af8b-b8cf-460a-8bed-14a1766182d3/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/6fc4af8b-b8cf-460a-8bed-14a1766182d3/vigil",
+        "_updatedDate": "Fri Jul 21 2023 18:50:52 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "2",
+            "y": "3",
+            "scale": "0.360",
+            "h": 1227,
+            "w": 984
+          },
+          "time": {
+            "in": 0.10177659574468086,
+            "out": 15
+          }
+        },
+        "memberId": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689646298/covid-19-grief-project/6fc4af8b-b8cf-460a-8bed-14a1766182d3/memory-c563b64a-2501-4257-93f6-761985c6e690.mp4",
+        "assetId": "a1740710959fd193f9ae789b559421bf",
+        "_id": "ec0d67e9-61a3-4693-a312-a071990b4389",
+        "_owner": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "_createdDate": "Mon Jul 17 2023 19:12:37 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990536/covid-19-grief-project/6fc4af8b-b8cf-460a-8bed-14a1766182d3/memory-c563b64a-2501-4257-93f6-761985c6e690-transform.mp4",
+        "publicId": "covid-19-grief-project/6fc4af8b-b8cf-460a-8bed-14a1766182d3/memory-c563b64a-2501-4257-93f6-761985c6e690",
+        "_updatedDate": "Fri Jul 21 2023 18:50:40 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "125",
+            "scale": "0.737",
+            "h": 598,
+            "w": 480
+          },
+          "time": {
+            "in": 2.6475000000000004,
+            "out": 12.131873039245606
+          }
+        },
+        "memberId": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xSmallPoster-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/medium-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/smallPoster-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/small-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xSmall-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xLarge-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/mediumPoster-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/large-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/xLargePoster-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/6fc4af8b-b8cf-460a-8bed-14a1766182d3/largePoster-memory-c563b64a-2501-4257-93f6-761985c6e690-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+    "title": "jisivam120's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "d4871c78-2c7a-4ee3-886d-05aa3bafd07b",
+        "_owner": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "_createdDate": "Wed Jul 05 2023 21:14:06 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:55:26 GMT-0700 (Pacific Daylight Time)",
+        "country": "France",
+        "lastName": "Siden",
+        "firstName": "Hannah",
+        "memberId": "6fc4af8b-b8cf-460a-8bed-14a1766182d3"
+      },
+      {
+        "_id": "836c7243-ab8f-432a-b240-b8c3f6fd92f9",
+        "_owner": "6fc4af8b-b8cf-460a-8bed-14a1766182d3",
+        "_createdDate": "Wed Jul 05 2023 21:13:49 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:55:31 GMT-0700 (Pacific Daylight Time)",
+        "country": "Belgium",
+        "lastName": "The Pirate",
+        "firstName": "Johnny",
+        "memberId": "6fc4af8b-b8cf-460a-8bed-14a1766182d3"
+      }
+    ]
+  },
+  {
+    "memoryItems": [
+      {
+        "_id": "c8c2d4cf-1377-4a85-8296-87a85c2359c2",
+        "_owner": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+        "_createdDate": "Mon Jul 17 2023 19:22:43 GMT-0700 (Pacific Daylight Time)",
+        "dateOfDeath": "Wed Jul 05 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "dateOfBirth": "Mon Jul 17 2023 00:00:00 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Fri Jul 21 2023 18:45:53 GMT-0700 (Pacific Daylight Time)",
+        "country": "Costa Rica",
+        "moderationItem": "8e377c69-5bfe-49e3-b943-23dbcedfeb4b",
+        "lastName": "Atom",
+        "firstName": "Alice",
+        "memberId": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+        "itemName": "Ruby Arnold's memory of Alice",
+        "mediaId": "83e3e2f4-888f-42d3-ac01-3a8f6336de21",
+        "memory": "Alice was a fun loving person. She was so creative and loved to make us all laugh. "
+      }
+    ],
+    "_id": "fdf1a08a-a451-46ba-9ba6-f9b7d3b08b23",
+    "_owner": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+    "_createdDate": "Wed Jul 05 2023 13:46:03 GMT-0700 (Pacific Daylight Time)",
+    "moderationStatus": "4b901cee-36a4-41aa-be6d-e8eaf184cf11",
+    "_updatedDate": "Sun Aug 13 2023 12:34:07 GMT-0700 (Pacific Daylight Time)",
+    "isReady": true,
+    "contributionStatus": "aec473cd-9a7a-410c-b0e1-42b77ba1ede2",
+    "mediaItems": [
+      {
+        "format": "mp4",
+        "collection": "Vigil",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689296553/covid-19-grief-project/aee3c787-74c6-4193-ac05-8d0a813fc1cb/vigil.mp4",
+        "assetId": "b159d2d82b68097c058e61d03732f553",
+        "_id": "f94d34f8-8616-408a-bb7c-e32246d87a2e",
+        "_owner": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+        "_createdDate": "Wed Jul 05 2023 14:40:55 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990320/covid-19-grief-project/aee3c787-74c6-4193-ac05-8d0a813fc1cb/vigil-transform.mp4",
+        "publicId": "covid-19-grief-project/aee3c787-74c6-4193-ac05-8d0a813fc1cb/vigil",
+        "_updatedDate": "Fri Jul 21 2023 18:46:56 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "133",
+            "scale": "0.737",
+            "h": 598,
+            "w": 480
+          },
+          "time": {
+            "in": 0,
+            "out": 14.884925290696165
+          }
+        },
+        "memberId": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xsmall-vigil-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/medium-vigil-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/small-vigil-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/small-vigil-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xSmall-vigil-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xLarge-vigil-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/mediumPoster-vigil-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/large-vigil-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xLargePoster-vigil-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/largePoster-vigil-transform.jpg"
+        }
+      },
+      {
+        "format": "mp4",
+        "collection": "Memories",
+        "url": "https://res.cloudinary.com/deux618fa/video/upload/v1689646991/covid-19-grief-project/aee3c787-74c6-4193-ac05-8d0a813fc1cb/memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2.mp4",
+        "assetId": "c20227682dcc1c50f02fd4e74d070d20",
+        "_id": "83e3e2f4-888f-42d3-ac01-3a8f6336de21",
+        "_owner": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+        "_createdDate": "Mon Jul 17 2023 19:24:24 GMT-0700 (Pacific Daylight Time)",
+        "transformUrl": "https://res.cloudinary.com/deux618fa/video/upload/v1689990350/covid-19-grief-project/aee3c787-74c6-4193-ac05-8d0a813fc1cb/memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.mp4",
+        "publicId": "covid-19-grief-project/aee3c787-74c6-4193-ac05-8d0a813fc1cb/memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2",
+        "_updatedDate": "Fri Jul 21 2023 18:48:06 GMT-0700 (Pacific Daylight Time)",
+        "isReady": true,
+        "transformations": {
+          "crop": {
+            "x": "0",
+            "y": "125",
+            "scale": "0.737",
+            "h": 598,
+            "w": 480
+          },
+          "time": {
+            "in": 0.16736037234042553,
+            "out": 12.188347012905364
+          }
+        },
+        "memberId": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+        "derivedUrls": {
+          "xSmallPoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xSmallPoster-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.jpg",
+          "medium": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/medium-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.mp4",
+          "smallPoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/smallPoster-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.jpg",
+          "small": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/small-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.mp4",
+          "xSmall": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xSmall-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.mp4",
+          "xLarge": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xLarge-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.mp4",
+          "mediumPoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/mediumPoster-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.jpg",
+          "large": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/large-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.mp4",
+          "xLargePoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/xLargePoster-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.jpg",
+          "largePoster": "/gif-gallery-wix/contribution-assets/aee3c787-74c6-4193-ac05-8d0a813fc1cb/largePoster-memory-c8c2d4cf-1377-4a85-8296-87a85c2359c2-transform.jpg"
+        }
+      }
+    ],
+    "memberId": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+    "title": "lafoxot237's contribution",
+    "vigilParticipants": [
+      {
+        "_id": "fac94121-228d-485f-9f60-af68349fb26c",
+        "_owner": "aee3c787-74c6-4193-ac05-8d0a813fc1cb",
+        "_createdDate": "Sun Aug 13 2023 12:33:35 GMT-0700 (Pacific Daylight Time)",
+        "_updatedDate": "Tue Aug 22 2023 15:52:34 GMT-0700 (Pacific Daylight Time)",
+        "country": "Jamaica",
+        "lastName": "Arnold",
+        "firstName": "Ruby",
+        "memberId": "aee3c787-74c6-4193-ac05-8d0a813fc1cb"
+      }
+    ]
+  }
+]
