@@ -5,7 +5,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Aslamhus\\RectPacker\\": "src/"
+      "Aslamhus\\RectPacker\\": "src/RectPacker"
     }
   },
   "authors": [
@@ -14,5 +14,10 @@
       "email": "aslam.percy.husain@gmail.com"
     }
   ],
-  "require": {}
+  "require-dev": {
+    "phpunit/phpunit": "^9.6"
+  },
+  "scripts": {
+    "test-packer": "phpunit --verbose ./test/RectPacker/TestRectPacker.php"
+  }
 }

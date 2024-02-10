@@ -116,11 +116,13 @@ class RectanglePacker {
     this.screenHeight = screenArea[1];
     this.tiles = tiles;
     this.tileAspectRatio = tileAspectRatio;
-    this.gutter = gutter ?? 5;
+    this.gutter = gutter ?? 0;
     this.columns = columns ?? 0;
     this.completeRectangle = completeRectangle ?? false;
     this.canRemoveTiles = canRemoveTiles ?? true;
     // calculate min tile dimensions and throw error if a solution is not possible with the given values
+    this.minTileWidth = minTileWidth ?? 0;
+    this.minTileHeight = minTileHeight ?? 0;
     this.calcMinTileDimensions(minTileWidth, minTileHeight);
     this.maxTileHeight = maxTileHeight;
     this.bestGuessTileHeight = this.calcBestGuessTileHeight();
@@ -130,7 +132,6 @@ class RectanglePacker {
     // default try lmit is 800
     this.performanceStartTime = 0;
     this.performanceLimit = 1000;
-    this.correctionStep = 0.1;
     this.errorMargin = 0.2;
     this.onError = onError;
     this.direction = 1;
@@ -200,7 +201,7 @@ class RectanglePacker {
   }
 
   /**
-   * Get best guess tile height
+   * Calc best guess tile height
    *
    * If columns are set, then calculate the best guess tile height based on the columns.
    *
@@ -212,7 +213,7 @@ class RectanglePacker {
       // if columns are set, then calculate the best guess tile height based on the columns
       bestGuess = this.calcTileDimensionsFromColumns(this.columns)[1];
     } else {
-      bestGuess = this.calcBestGuesTileHeightByArea();
+      bestGuess = this.calcBestGuessTileHeightByArea();
     }
 
     if (bestGuess < 1) {
@@ -221,7 +222,12 @@ class RectanglePacker {
     return bestGuess;
   }
 
-  calcBestGuesTileHeightByArea() {
+  /**
+   * Calc best guess tile height based on area
+   *
+   * @returns {number} - best guess tile height
+   */
+  calcBestGuessTileHeightByArea() {
     return Math.floor(Math.sqrt((this.screenWidth * this.screenHeight) / this.tiles.length));
   }
 
@@ -319,12 +325,10 @@ class RectanglePacker {
     // calculate row width, column height (including gutter)
     const rowWidth = (tileWidth + this.gutter) * columns + this.gutter;
     const columnHeight = (tileHeight + this.gutter) * rows + this.gutter;
-
-    // screen width underflow
-    let errorType = '';
+    let discrepancy = 0;
     // screen height overflow
     if (columnHeight > screenHeight) {
-      const discrepancy = columnHeight - screenHeight;
+      discrepancy = columnHeight - screenHeight;
       if (Math.abs(discrepancy) > this.errorMargin) {
         throw new PackerError('Overflow screen height', {
           guess: this.bestGuessTileHeight,
@@ -336,7 +340,7 @@ class RectanglePacker {
     }
     // screen width overflow
     if (rowWidth > screenWidth) {
-      const discrepancy = rowWidth - screenWidth;
+      discrepancy = rowWidth - screenWidth;
       if (Math.abs(discrepancy) > this.errorMargin) {
         throw new PackerError('Overflow screen width', {
           guess: this.bestGuessTileHeight,
@@ -348,7 +352,7 @@ class RectanglePacker {
     }
     // underflow screen width
     if (rowWidth < screenWidth) {
-      const discrepancy = screenWidth - rowWidth;
+      discrepancy = screenWidth - rowWidth;
       if (Math.abs(discrepancy) > this.errorMargin) {
         throw new PackerError('Underflow screen width', {
           guess: this.bestGuessTileHeight,
@@ -361,9 +365,9 @@ class RectanglePacker {
   }
 
   /**
-   * Vallidate the rectangle is complete (rows are full)
+   * Validate the rectangle is complete (rows are full)
    * @param {*} properties
-   * @returns
+   * @returns {boolean}
    */
   validateRectangleIsComplete(properties) {
     const { tileWidth, tileHeight, columns, rows } = properties;
@@ -395,6 +399,7 @@ class RectanglePacker {
         discrepancy: [this.minTileWidth - tileWidth, this.minTileHeight - tileHeight],
       });
     }
+    // Above maximum
     if (this.maxTileHeight > 0 && tileHeight + this.gutter > this.maxTileHeight) {
       throw new PackerError('Tile dimensions above maximum', {
         guess: this.bestGuessTileHeight,
@@ -452,7 +457,6 @@ class RectanglePacker {
     this.performanceStartTime = performance.now();
     // begin heuristic
     while (!properties) {
-      // try again with new guess
       try {
         // escape hatch for try limit / stack overflow
         this.validateTryLimit();
@@ -466,7 +470,7 @@ class RectanglePacker {
         // validate the column number is correct (if set)
         this.validateColumnConstraintIsSatisfied(properties);
       } catch (error) {
-        // handle errors, continue with new guess
+        // handle errors and get correction
         [correction, errorType] = this.handleHeuristicError(error, lastError, properties);
 
         // reset properties
@@ -480,20 +484,22 @@ class RectanglePacker {
         // console log debug info on try
         this.debug && console.log(`----- try #${this.tries.length}`, this.bestGuessTileHeight);
         this.debug && console.log('error', errorType, correction);
+        // handle best guess tile height equals 0
         if (this.bestGuessTileHeight < 1) {
           // if remove tiles is enabled, then remove tiles
           if (this.canRemoveTiles) {
             this.removeTile();
-            // restart
+            // recalculate best guess based on new total tile area
+            this.bestGuessTileHeight = this.calcBestGuessTileHeightByArea();
+          } else {
+            throw new Error('Tile height cannot equal 0');
           }
-          throw new Error('Tile height cannot equal 0');
         }
 
-        // end try catch
         // fire onError callback
         if (this.onError) this.onError(`${errorType} (${correction})`);
       }
-
+      // end try catch
       // push error data to tries last index
       this.logTryData(errorType, correction, errorDescription);
     }
@@ -548,7 +554,7 @@ class RectanglePacker {
           // remove tile
           this.removeTile();
           // recalculate best guess based on new total tile area
-          this.bestGuessTileHeight = this.calcBestGuesTileHeightByArea();
+          this.bestGuessTileHeight = this.calcBestGuessTileHeightByArea();
           return [0, errorType];
         }
         throw new PackerError(errorType, error.description);
@@ -698,7 +704,7 @@ class RectanglePacker {
    *
    * @param {number} w - minTileWidth
    * @param {number} h - minTileHeight
-   * @returns {number[]} [minTileWidth, minTileHeight]
+   * @returns {number[]} [minTileWidth, minTileHeight] - includes gutter
    */
   calcMinTileDimensions(w, h) {
     if (!w && !h) {

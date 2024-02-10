@@ -6,6 +6,10 @@ Rectangle Packer is a JavaScript class designed to efficiently pack rectangles i
 
 I designed this algorithm in order to solve the problem of filling up different screen areas with a grid of videos where only the aspect ratio and number of videos was known. I couldn't achieve the desired effect with layout algorithms native to browser and even so, I needed an implementation that could work on the server. The algorithm outputs the (x,y) positions for each `tile` of the grid, allowing you to arrange your grid based on the coordinates produced.
 
+### Usage
+
+This class is available in `JavaScript` and `PHP` for client and server implementation. Find both classes in the src directory.
+
 ## Requirements
 
 To utilize the heuristic algorithm, the following data is required:
@@ -41,6 +45,26 @@ const packer = new RectanglePacker({
 const result = packer.calcTileProperties();
 console.log(result);
 ```
+
+### Result
+
+The result of the heuristic, if successful will be an object (or in the PHP class an associtaive array) with the following keys:
+
+```javascript
+const {
+  tileWidth : 0, // the width of each tile (excluding gutter)
+  tileHeight: 0, // the height of each tile (excluding the gutter)
+  columns: 0, // the grid columns
+  rows: 0, // the grid rows
+  realHeight: 0, // the height of the grid of all the tiles (including gutter)
+  realWidth: 0 // the width of the grid ...
+  positions: [], // an array of positions corresponding to the tiles array you gave in the constructor. Each tile has an (x,y) coordinate according to its position in the grid
+  tiles: [], // the original tiles array you gave in the constructor
+  tries : [], // an array with data for each iteration of the packer providing granular analysis of the heuristic
+} = result;
+```
+
+If unsuccessful, `calcTileProperties` will throw an error.
 
 ## Potential Improvements
 
