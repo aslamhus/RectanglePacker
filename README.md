@@ -69,7 +69,7 @@ If unsuccessful, `calcTileProperties` will throw an error.
 ## Efficiency
 
 Though I have not extensively measured the time complexity of the algorithm, most
-cases are solved within 1-4 milliseconds and 1 - 10 iterations. As you add more constraints, the time complexity will increase. When I have time I would love to measure this more precisely. Feedback/observations are welcome!
+cases are solved within 1-4 milliseconds and 1 - 10 iterations. As you add more constraints, the time complexity will increase. When I have time (haha!) I would love to measure this more precisely. Feedback/observations are welcome!
 
 ## Potential Improvements
 
