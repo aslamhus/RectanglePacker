@@ -1,14 +1,38 @@
 # Rectangle Packer v2.0.0
 
-`RectanglePacker` is a JavaScript\PHP class designed to efficiently pack rectangles of the same aspect ratio into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm. For more information on the Rectangle Packing problem see this [wiki](https://en.wikipedia.org/wiki/Rectangle_packing). This heuristic solves the second variant listed in the aforementioned article, _**Packing identical squares in a rectilinear polygon.**_
+`RectanglePacker` is a JavaScript\PHP class designed to efficiently pack rectangles of the same aspect ratio into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm. For more information on the this problem see the [wiki](https://en.wikipedia.org/wiki/Rectangle_packing). This heuristic solves the second variant listed in the article, _**Packing identical squares in a rectilinear polygon.**_
 
 ## Purpose
 
 I designed this algorithm in order to fill different screen areas with a grid of videos where only the aspect ratio and number of videos was known. I couldn't achieve the desired effect with browser layout algorithms (such as flexbox), and even so, I needed an implementation that could work on the server. The algorithm outputs the (x,y) positions for each `tile` of the grid, allowing you to arrange your grid based on the coordinates produced.
 
-### Usage
+## Usage
 
-This class is available in `JavaScript` and `PHP` for client and server implementation. Find both classes in the src directory.
+This class is available in `JavaScript` and `PHP` for client and server implementation.
+
+### JavaScript
+
+Clone the repo and import from the src directory. If requested, I'll make this available as an npm package.
+
+#### Clone the repo
+
+```bash
+git clone https://github.com/aslamhus/RectanglePacker.git
+```
+
+#### Import
+
+```javascript
+import RectanglePacker from '../RectanglePacker/src/RectanglePacker.js';
+```
+
+### PHP
+
+#### install with composer
+
+```php
+composer require aslamhus/rectpacker
+```
 
 ## Requirements
 
@@ -48,7 +72,7 @@ console.log(result);
 
 ### Result
 
-The result of the heuristic, if successful, will be an object (or in the PHP class an associtaive array) with the following keys:
+The result of the heuristic, if successful, will be an object (or in the PHP class an associative array) with the following keys:
 
 ```javascript
 const {
@@ -73,9 +97,11 @@ cases are solved within 1-4 milliseconds and 1 - 10 iterations. As you add more 
 
 ## Potential Improvements
 
-### Simulated Annealing algorithm
+### Metaheuristic
 
-Implement a simulated annealing approach - run the heuristic multiple times with different starting best guesses. Then create a method to measure the viability of the solutions, finally choosing the best. Currently, the heuristic iterates downwards from a large best guess, reducing the number of columns represented by the best guess tile height until a solution is found. This means that the optimal solution is sometimes missed.
+Run the heuristic multiple times with different starting best guesses, leveraging web workers for efficiency if necessary. Develop a method to measure the viability of the solutions, with remaining space as the main criterion.
+
+Currently, the heuristic iterates downwards from a high initial best guess, reducing the number of columns until a solution is found. This means that the optimal solution is sometimes missed. Starting with a range of best guesses, some of which purposefully overshooting the bin area, would increase the likelihood of an optimal solution.
 
 ## Test the RectanglePacker online
 
@@ -85,7 +111,7 @@ Play with different screen areas, numbers of tiles, gutter size, tile aspect rat
 
 ### Note on gutter accuracy \ Pixel rounding
 
-Occasionally, in the testing application the gutter may appear off by a pixel or two. This is because the browser rounds pixel values. If the gutter is small and each tile width is rounded up, the gutter at the end of the row will appear truncated. This appears like an error, but on examination of the tile positions' real values (which are not rounded), you will find the gutter values are correct. At a later date, I will probably need to account for this pixel rounding issue in the JavaScript implementation of the algorithm. \*\*\_
+Occasionally, in the testing application the gutter may appear off by a pixel or two. This is because the browser rounds pixel values. If the gutter is small and each tile width is rounded up, the gutter at the end of the row will appear truncated. This appears like an error, but on examination of the tile positions' real values (which are not rounded), you will find the gutter values are correct. At a later date, I will probably need to account for this pixel rounding issue in the JavaScript implementation of the algorithm.
 
 ## License
 
