@@ -101,7 +101,7 @@ cases are solved within 1-4 milliseconds and 1 - 10 iterations. As you add more 
 
 Run the heuristic multiple times with different starting best guesses, leveraging web workers for efficiency if necessary. Develop a method to measure the viability of the solutions, with remaining space as the main criterion.
 
-Currently, the heuristic iterates downwards from a high initial best guess, reducing the number of columns until a solution is found. This means that the optimal solution is sometimes missed. Starting with a range of best guesses, some of which purposefully overshooting the bin area, would increase the likelihood of an optimal solution.
+Currently, the heuristic iterates downwards from a high initial best guess, reducing the number of columns until a solution is found. This means that the optimal solution is sometimes missed. Starting with a range of best guesses, some of which purposefully overshoot the bin area, would increase the likelihood of an optimal solution.
 
 ## Test the RectanglePacker online
 

@@ -11,7 +11,7 @@
  * A heuristic for packing rectangles into a rectangle.
  * This class' main function is to solve the following problem:
  * Given a screen area and a fixed number of tiles with a fixed aspect ratio,
- * find the maimal tile size that will fit the screen area.
+ * find the maximal tile size that will fit the screen area.
  * This is a version of the bin packing problem, which is NP-hard.
  *
  * The heuristic works by making an initial best guess for the tile size,
@@ -74,6 +74,7 @@
  * @property {number[]} screenArea [width, height]
  * @property {Array<string>} tiles - array of tiles src
  * @property {number} tileAspectRatio - tile aspect ratio
+ * // optional properties
  * @property {number} [gutter] - gutter between tiles
  * @property {function} [onError] - callback for errors
  * @property {boolean} [completeRectangle] - if true, the rectangle will be complete, i.e. all rows will be full
@@ -129,10 +130,10 @@ class RectanglePacker {
     this.initialBestGuessTileHeight = this.bestGuessTileHeight + 0;
     this.tries = [];
     this.tryLimit = tryLimit ?? 1000;
-    // default try lmit is 800
+    // default try limit is 800
     this.performanceStartTime = 0;
     this.performanceLimit = 1000;
-    this.errorMargin = 0.2;
+    this.errorMargin = 0;
     this.onError = onError;
     this.direction = 1;
     this.removedTiles = [];
@@ -531,7 +532,7 @@ class RectanglePacker {
    * Handle heuristic error
    *
    * This method is called when the heuristic encounters an error.
-   * It will handle the error and return a correction/errortype for the best guess tile height
+   * It will handle the error and return a correction/errorType for the best guess tile height
    * based on the error and the last error.
    *
    *
