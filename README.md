@@ -1,10 +1,10 @@
 # Rectangle Packer v2.0.0
 
-Rectangle Packer is a JavaScript\PHP class designed to efficiently pack rectangles of the same aspect ratio into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm. For more information on the Rectangle Packing problem see this [wikipedia articles](https://en.wikipedia.org/wiki/Rectangle_packing). This heuristic solves the second variant listed in the wikipedia article, "Packing identical squares in a rectilinear polygon".
+`RectanglePacker` is a JavaScript\PHP class designed to efficiently pack rectangles of the same aspect ratio into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm. For more information on the Rectangle Packing problem see this [wiki](https://en.wikipedia.org/wiki/Rectangle_packing). This heuristic solves the second variant listed in the aforementioned article, _**Packing identical squares in a rectilinear polygon.**_
 
 ## Purpose
 
-I designed this algorithm in order to solve the problem of filling up different screen areas with a grid of videos where only the aspect ratio and number of videos was known. I couldn't achieve the desired effect with layout algorithms native to browser and even so, I needed an implementation that could work on the server. The algorithm outputs the (x,y) positions for each `tile` of the grid, allowing you to arrange your grid based on the coordinates produced.
+I designed this algorithm in order to fill different screen areas with a grid of videos where only the aspect ratio and number of videos was known. I couldn't achieve the desired effect with browser layout algorithms (such as flexbox), and even so, I needed an implementation that could work on the server. The algorithm outputs the (x,y) positions for each `tile` of the grid, allowing you to arrange your grid based on the coordinates produced.
 
 ### Usage
 
@@ -66,10 +66,10 @@ const {
 
 If unsuccessful, `calcTileProperties` will throw an error.
 
-## Time Complexity
+## Efficiency
 
 Though I have not extensively measured the time complexity of the algorithm, most
-cases are solved within 1-4 milliseconds within 1 - 5 iterations. As you add more constraints, the time complexity will increase. When I have time I would love to measure this more precisely. Feedback/observations are welcome!
+cases are solved within 1-4 milliseconds and 1 - 10 iterations. As you add more constraints, the time complexity will increase. When I have time I would love to measure this more precisely. Feedback/observations are welcome!
 
 ## Potential Improvements
 
@@ -83,7 +83,9 @@ If you'd like to take the algorithm for a spin, you can find a testing applicati
 
 Play with different screen areas, numbers of tiles, gutter size, tile aspect ratio and more.
 
-_**Note on Gutter: the gutter may appear off by a pixel or two occasionally because the browser will round pixel values.**_
+### Note on gutter accuracy \ Pixel rounding
+
+Occasionally, in the testing application the gutter may appear off by a pixel or two. This is because the browser rounds pixel values. If the gutter is small and each tile width is rounded up, the gutter at the end of the row will appear truncated. This appears like an error, but on examination of the tile positions' real values (which are not rounded), you will find the gutter values are correct. At a later date, I will probably need to account for this pixel rounding issue in the JavaScript implementation of the algorithm. \*\*\_
 
 ## License
 
