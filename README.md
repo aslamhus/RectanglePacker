@@ -1,6 +1,6 @@
 # Rectangle Packer v2.0.0
 
-Rectangle Packer is a JavaScript class designed to efficiently pack rectangles into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm.
+Rectangle Packer is a JavaScript\PHP class designed to efficiently pack rectangles of the same aspect ratio into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm. For more information on the Rectangle Packing problem see this [wikipedia articles](https://en.wikipedia.org/wiki/Rectangle_packing). This heuristic solves the second variant listed in the wikipedia article, "Packing identical squares in a rectilinear polygon".
 
 ## Purpose
 
@@ -66,9 +66,14 @@ const {
 
 If unsuccessful, `calcTileProperties` will throw an error.
 
+## Time Complexity
+
+Though I have not extensively measured the time complexity of the algorithm, most
+cases are solved within 1-4 milliseconds within 1 - 5 iterations. As you add more constraints, the time complexity will increase. When I have time I would love to measure this more precisely. Feedback/observations are welcome!
+
 ## Potential Improvements
 
-### Simulated Annealing algoirthm
+### Simulated Annealing algorithm
 
 Implement a simulated annealing approach - run the heuristic multiple times with different starting best guesses. Then create a method to measure the viability of the solutions, finally choosing the best. Currently, the heuristic iterates downwards from a large best guess, reducing the number of columns represented by the best guess tile height until a solution is found. This means that the optimal solution is sometimes missed.
 
