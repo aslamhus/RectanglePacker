@@ -48,7 +48,7 @@ console.log(result);
 
 ### Result
 
-The result of the heuristic, if successful will be an object (or in the PHP class an associtaive array) with the following keys:
+The result of the heuristic, if successful, will be an object (or in the PHP class an associtaive array) with the following keys:
 
 ```javascript
 const {
