@@ -211,11 +211,17 @@ class RectPacker
 
     /**
      * Calc best guess tile height based on area
+     *
+     *
+   * The intial best guess tile height is based on the area of the screen and the number of tiles.
+   * Since the heuristic will adjust the best guess downwards, we want to start with a guess that
+   * overshoots the actual best guess (hence the multiplication by 2).
+   *
      * @return float - best guess tile height
      */
     private function calcBestGuessTileHeightByArea()
     {
-        return floor(sqrt(($this->screenWidth * $this->screenHeight) / count($this->tiles)));
+        return floor(sqrt(($this->screenWidth * $this->screenHeight) / count($this->tiles))) * 2;
     }
 
     /**
