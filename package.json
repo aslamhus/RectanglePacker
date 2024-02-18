@@ -1,6 +1,6 @@
 {
   "name": "rectanglepacker",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "heuristic algorithm for efficiently packing rectangles of a fixed aspect ratio into a defined space, addressing the NP-hard bin packing problem through iterative adjustment of tile sizes and arrangement.",
   "main": "index.js",
   "directories": {
