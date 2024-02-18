@@ -409,7 +409,7 @@ class RectPacker
      */
     private function validateColumnConstraintIsSatisfied(array $properties)
     {
-        if ($this->columns > 0 && $properties && $properties['columns'] !== $this->columns) {
+        if ($this->columns > 0 && !empty($properties) && $properties['columns'] !== $this->columns) {
             throw new PackerException('Could not satisfy columns constraint', [
                 'guess' => $this->bestGuessTileHeight,
                 'predicate' => "properties.columns ({$properties['columns']}) !== this.columns ({$this->columns})",
@@ -562,7 +562,9 @@ class RectPacker
                     $this->bestGuessTileHeight = $this->calcBestGuessTileHeightByArea();
                     return [0, $exceptionType];
                 }
-                throw new PackerError($exceptionType, $e->getDescription());
+                // if we cannot remove tiles, then try again with a different best guess
+                throw new PackerException($exceptionType, $e->getDescription());
+
 
             case 'Overflow screen height':
                 // add columns to decrease the tile height
@@ -601,7 +603,7 @@ class RectPacker
                     $this->bestGuessTileHeight = $this->minTileHeight;
                     return [0, $exceptionType];
                 }
-                throw new PackerError($exceptionType, $e->getDescription());
+                throw new PackerException($exceptionType, $e->getDescription());
 
             case 'Tile dimensions above maximum':
                 if ($this->canRemoveTiles) {
@@ -610,7 +612,7 @@ class RectPacker
                     $this->bestGuessTileHeight = $this->maxTileHeight;
                     return [0, $exceptionType];
                 }
-                throw new PackerError($exceptionType, $e->getDescription());
+                throw new PackerException($exceptionType, $e->getDescription());
 
             default:
                 throw new Exception($e->getMessage());
@@ -618,7 +620,6 @@ class RectPacker
 
         // calculate correction
         $correction = $this->calcCorrectionForNewColumnValue($properties, $newColumns);
-
         return [$correction, $exceptionType];
     }
 
@@ -820,10 +821,11 @@ class RectPacker
      */
     private function getTileGridColumns($tileWidth)
     {
-        $columnsPerRow = round(($this->screenWidth - $this->gutter) / ($tileWidth + $this->gutter));
+        $columnsPerRow = (int) round(($this->screenWidth - $this->gutter) / ($tileWidth + $this->gutter));
         if (count($this->tiles) < $columnsPerRow - 1) {
             throw new Exception('Tile width and number of tiles cannot fill the container width');
         }
+
         return $columnsPerRow;
     }
 

@@ -167,8 +167,10 @@ class RectanglePacker {
       gutter,
       minTileWidth,
       minTileHeight,
+      maxTileHeight,
       columns,
       completeRectangle,
+      canRemoveTiles,
     }
   ) {
     const {
@@ -178,8 +180,10 @@ class RectanglePacker {
       gutter,
       minTileWidth,
       minTileHeight,
+      maxTileHeight,
       columns,
       completeRectangle,
+      canRemoveTiles,
     } = options;
     this.tiles = tiles;
     this.screenArea = screenArea;
@@ -188,7 +192,10 @@ class RectanglePacker {
     this.tileAspectRatio = tileAspectRatio;
     this.gutter = gutter ?? this.gutter;
     this.columns = columns ?? this.columns;
+    this.minTileHeight = minTileHeight ?? this.minTileHeight;
+    this.maxTileHeight = maxTileHeight ?? this.maxTileHeight;
     this.completeRectangle = completeRectangle ?? this.completeRectangle;
+    this.canRemoveTiles = canRemoveTiles ?? this.canRemoveTiles;
     this.calcMinTileDimensions(minTileWidth, minTileHeight);
     // reset best guess based on new options
     this.bestGuessTileHeight = this.calcBestGuessTileHeight();
@@ -563,6 +570,8 @@ class RectanglePacker {
           this.bestGuessTileHeight = this.calcBestGuessTileHeightByArea();
           return [0, errorType];
         }
+        // if we cannot remove tiles, then throw an error as the columns constraint cannot be satisfied
+        // and no correction can be made
         throw new PackerError(errorType, error.description);
 
       case 'Overflow screen height':
