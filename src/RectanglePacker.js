@@ -53,6 +53,14 @@
  *  i.e. all rows will be full. Complete rectangle option is not always possible, especially if the number of tiles is prime.
  * If you enable canRemoveTiles, then the heuristic will remove tiles until the rectangle is complete.
  *
+ *
+ * ### AllowIncompleteRows
+ *
+ * If the allowIncompleteRows option is set to true, then the heuristic will allow incomplete rows.
+ * This option must be used in conjunction with the columns option.
+ * For instance, if you specify 10 columns and allowIncompleteRows,
+ * then the heuristic will allow the last row to have less than 10 tiles.
+ *
  * ### Tries
  *
  * The try limit is the maximum number of tries before the heuristic gives up
@@ -105,22 +113,31 @@ class RectanglePacker {
     columns,
     completeRectangle,
     canRemoveTiles,
+    allowIncompleteRows = false,
     tryLimit,
     debug = true,
   }) {
     if (!screenArea) throw new Error('screenArea is required');
     if (!tiles) throw new Error('tiles is required');
     if (!tileAspectRatio) throw new Error('tileAspectRatio is required');
-
+    if (allowIncompleteRows === true && completeRectangle === true) {
+      throw new Error('allowIncompleteRows and completeRectangle cannot both be true');
+    }
+    if (allowIncompleteRows === true && columns === 0) {
+      throw new Error('allowIncompleteRows requires columns to be set');
+    }
+    // required
     this.screenArea = screenArea;
     this.screenWidth = screenArea[0];
     this.screenHeight = screenArea[1];
     this.tiles = tiles;
     this.tileAspectRatio = tileAspectRatio;
+    // constraints
     this.gutter = gutter ?? 0;
     this.columns = columns ?? 0;
     this.completeRectangle = completeRectangle ?? false;
     this.canRemoveTiles = canRemoveTiles ?? true;
+    this.allowIncompleteRows = allowIncompleteRows ?? false;
     // calculate min tile dimensions and throw error if a solution is not possible with the given values
     this.minTileWidth = minTileWidth ?? 0;
     this.minTileHeight = minTileHeight ?? 0;
@@ -133,7 +150,7 @@ class RectanglePacker {
     // default try limit is 800
     this.performanceStartTime = 0;
     this.performanceLimit = 1000;
-    this.errorMargin = 0;
+    this.errorMargin = 0.01;
     this.onError = onError;
     this.direction = 1;
     this.removedTiles = [];
@@ -218,12 +235,13 @@ class RectanglePacker {
   calcBestGuessTileHeight() {
     let bestGuess = 0;
     if (this.columns > 0) {
-      // if columns are set, then calculate the best guess tile height based on the columns
       bestGuess = this.calcTileDimensionsFromColumns(this.columns)[1];
     } else {
       bestGuess = this.calcBestGuessTileHeightByArea();
     }
-
+    if (isNaN(bestGuess)) {
+      throw new Error('Best guess tile height cannot equal NaN');
+    }
     if (bestGuess < 1) {
       throw new Error('Best guess tile height cannot equal 0');
     }
@@ -304,7 +322,7 @@ class RectanglePacker {
 
     if (this.completeRectangle) {
       // if the number of tiles is a prime number, then the rectangle will never be complete
-      if (this.isPrime(this.tiles.length)) {
+      if (this.isPrime(this.tiles.length) && !this.allowIncompleteRows) {
         throw new Error(
           'Solution is not possible for a complete rectangle with a prime number of tiles'
         );
@@ -336,7 +354,13 @@ class RectanglePacker {
     // note: these properties do not include gutter
     const { tileWidth, tileHeight, columns, rows } = properties;
     // calculate row width, column height (including gutter)
-    const rowWidth = (tileWidth + this.gutter) * columns + this.gutter;
+    let rowWidth = (tileWidth + this.gutter) * columns + this.gutter;
+    // if allowIncompleteRows is true and there is only one row
+    // then the total tiles per row may be less than the number of columns
+    // check if there is only one row, then use the number of tiles as the number of columns
+    if (this.allowIncompleteRows && rows === 1) {
+      rowWidth = (tileWidth + this.gutter) * this.tiles.length + this.gutter;
+    }
     const columnHeight = (tileHeight + this.gutter) * rows + this.gutter;
     let discrepancy = 0;
     // screen height overflow
@@ -364,7 +388,9 @@ class RectanglePacker {
       }
     }
     // underflow screen width
-    if (rowWidth < screenWidth) {
+    // Note: there is an edge case where the underflow screen width is allowed
+    const edgeCase = this.allowIncompleteRows === true && rows === 1;
+    if (rowWidth < screenWidth && !edgeCase) {
       discrepancy = screenWidth - rowWidth;
       if (Math.abs(discrepancy) > this.errorMargin) {
         throw new PackerError('Underflow screen width', {
@@ -396,40 +422,42 @@ class RectanglePacker {
   validateTilesObeyMinMax(properties) {
     const { tileWidth, tileHeight, columns, rows } = properties;
     // Below minimum
-    if (
-      tileWidth + this.gutter < this.minTileWidth ||
-      tileHeight + this.gutter < this.minTileHeight
-    ) {
+    if (tileHeight < this.minTileHeight) {
       throw new PackerError('Tile dimensions below minimum', {
         guess: this.bestGuessTileHeight,
-        predicate: `tileWidth (${tileWidth}) < minTileWidth (${this.minTileWidth}) || tileHeight (${tileHeight}) < minTileHeight (${this.minTileHeight})`,
+        predicate: `tileHeight (${tileHeight}) < minTileHeight (${this.minTileHeight})`,
         data: {
           tileWidth,
           tileHeight,
           minTileWidth: this.minTileWidth,
           minTileHeight: this.minTileHeight,
         },
-        discrepancy: [this.minTileWidth - tileWidth, this.minTileHeight - tileHeight],
+        discrepancy: [this.minTileHeight - tileHeight],
       });
     }
     // Above maximum
-    if (this.maxTileHeight > 0 && tileHeight + this.gutter > this.maxTileHeight) {
+    if (this.maxTileHeight > 0 && tileHeight > this.maxTileHeight) {
       throw new PackerError('Tile dimensions above maximum', {
         guess: this.bestGuessTileHeight,
-        predicate: `tileHeight (${tileHeight}) + gutter (${this.gutter}) > maxTileHeight (${this.maxTileHeight})`,
+        predicate: `tileHeight (${tileHeight}) > maxTileHeight (${this.maxTileHeight})`,
         data: {
           tileWidth,
           tileHeight,
           screenWidth: this.screenWidth,
           screenHeight: this.screenHeight,
         },
-        discrepancy: [this.maxTileHeight - (tileHeight + this.gutter)],
+        discrepancy: [this.maxTileHeight - tileHeight],
       });
     }
   }
 
   validateColumnConstraintIsSatisfied(properties) {
-    if (this.columns > 0 && properties && properties.columns !== this.columns) {
+    if (
+      this.columns > 0 &&
+      properties &&
+      properties.columns !== this.columns &&
+      !this.allowIncompleteRows
+    ) {
       throw new PackerError('Could not satisfy columns constraint', {
         guess: this.bestGuessTileHeight,
         predicate: `properties.columns (${properties.columns}) !== this.columns (${this.columns})`,
@@ -547,7 +575,10 @@ class RectanglePacker {
    * It will handle the error and return a correction/errorType for the best guess tile height
    * based on the error and the last error.
    *
-   *
+   * The correction is the amount to adjust the best guess tile height.
+   * We can adjust the best guess tile height based on the last error and the current error.
+   * We can add a correction to the best guess or reset the best guess to a new value
+   * and return a correction of 0.
    *
    * @param {*} error
    * @param {*} lastError
@@ -611,7 +642,9 @@ class RectanglePacker {
           this.bestGuessTileHeight = this.minTileHeight;
           return [0, errorType];
         }
-        throw new PackerError(errorType, error.description);
+        // reset best guess to min tile height
+        this.bestGuessTileHeight = this.minTileHeight;
+        return [0, errorType];
 
       case 'Tile dimensions above maximum':
         if (this.canRemoveTiles) {
@@ -620,7 +653,9 @@ class RectanglePacker {
           this.bestGuessTileHeight = this.maxTileHeight;
           return [0, errorType];
         }
-        throw new PackerError(errorType, error.description);
+        // reset best guess to max tile height
+        this.bestGuessTileHeight = this.maxTileHeight;
+        return [0, errorType];
 
       default:
         throw new Error(error.message);
@@ -728,11 +763,11 @@ class RectanglePacker {
     }
     if (!w) {
       // minTileWidth is not set
-      this.minTileHeight = h + this.gutter;
+      this.minTileHeight = h;
       this.minTileWidth = this.minTileHeight * this.tileAspectRatio;
     } else {
       // minTileHeight is not set
-      this.minTileWidth = w + this.gutter;
+      this.minTileWidth = w;
       this.minTileHeight = this.minTileWidth / this.tileAspectRatio;
     }
     return [this.minTileWidth, this.minTileHeight];
@@ -819,7 +854,7 @@ class RectanglePacker {
    */
   getTileGridColumns(tileWidth) {
     const columnsPerRow = Math.round((this.screenWidth - this.gutter) / (tileWidth + this.gutter));
-    if (this.tiles.length < columnsPerRow - 1) {
+    if (this.tiles.length < columnsPerRow - 1 && !this.allowIncompleteRows) {
       throw new Error('Tile width and number of tiles cannot fill the container width');
     }
     return columnsPerRow;
