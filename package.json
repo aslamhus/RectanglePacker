@@ -7,9 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm run test",
-    "start": "webpack serve --config './test/build/webpack.dev.js' --open",
-    "build": "webpack --config './test/build/webpack.prod.js'"
+    "test": "./node_modules/mocha/bin/mocha.js",
+    "start": "webpack serve --config './src/build/webpack.dev.js' --open",
+    "build": "webpack --config './src/build/webpack.prod.js'"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   "devDependencies": {
     "css-loader": "^6.10.0",
     "html-webpack-plugin": "^5.6.0",
+    "mocha": "^10.3.0",
     "style-loader": "^3.3.4",
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4",
