@@ -1,5 +1,5 @@
 /**
- * # Rectangle Packer v2.1.0
+ * # Rectangle Packer v2.2.0
  * by @aslamhus
  *
  *
