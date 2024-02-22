@@ -20,14 +20,6 @@ export default {
       template: path.resolve(__dirname, '../example/index.html'),
       chunks: ['app'],
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: '../example/rectangle-packer-problem',
-          to: path.resolve(__dirname, '../../example'),
-        },
-      ],
-    }),
   ],
   module: {
     rules: [
