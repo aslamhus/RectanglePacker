@@ -6,11 +6,11 @@
 
 I designed this algorithm in order to maximally **fill** the horizontal and vertical space within different screen areas with a grid of tiles where only the aspect ratio was known and the number of videos was variable. In my use case, the aspect ratio was 4/5.
 
-![a visual description of the problem](/rectangle-packer-problem.png)
+![a visual description of the problem](/rectangle-packer-problem.jpg)
 
 ### CSS Layout Algorithms
 
-I couldn't achieve the desired effect with browser layout algorithms like css `flexbox` or `grid`. Neither could maximally fill a containers both horizontally and vertically without either explicitly setting a height or width value for a tile or using javascript to correct the layout or (though I would love to see someone prove me wrong!). Regardless, I needed an implementation that could work on the server, not the clientside.
+I couldn't achieve the desired effect with browser layout algorithms like css `flexbox` or `grid`. Neither could maximally fill containers both horizontally and vertically without either explicitly setting a height/width value for a flex/grid-item or using javascript to correct the layout (though I would love to see someone prove me wrong!). Regardless, I needed an implementation that could work on the server, not the client side.
 
 ### Try the algorithm visualizer online
 
@@ -82,15 +82,7 @@ const {
 } = result;
 ```
 
-If unsuccessful, `pack` will throw an error.
-
-## Requirements
-
-To utilize the heuristic algorithm, the following data is required:
-
-- `screenArea`: The dimensions of the screen area (width, height).
-- `tiles`: An array of tile sources.
-- `tileAspectRatio`: The aspect ratio of the tiles.
+If unsuccessful, `RectanglePacker` will throw an error.
 
 ## Options
 
@@ -228,13 +220,11 @@ cases are solved within 1-4 milliseconds and 1 - 10 iterations. As you add more 
 
 ### Metaheuristic
 
-Run the heuristic multiple times with different starting best guesses, leveraging web workers for efficiency if necessary. Develop a method to measure the viability of the solutions, with remaining space as the main criterion.
-
-Currently, the heuristic iterates downwards from a high initial best guess, reducing the number of columns until a solution is found. This means that the optimal solution is sometimes missed. Starting with a range of best guesses, some of which purposefully overshoot the bin area, would increase the likelihood of an optimal solution.
+Run the heuristic multiple times with different starting best guesses, potentially leveraging web workers for efficiency if necessary. Develop a method to measure the viability of the solutions, with remaining space as the main criterion.
 
 ## Unit Testing
 
-`RectanglePacker` repo includes a `json` fil of test values with expected outputs. You can test both the `PHP` and `JavaScript` algorithm with these test values.
+`RectanglePacker` repo includes a `json` file with an array of test values, each with expected outputs. You can test both the `PHP` and `JavaScript` implentations of the algorithm with these test values.
 
 ### PHPUnit tests
 
@@ -255,3 +245,5 @@ In the testing application the gutter may appear off by a pixel or two. This is 
 ## License
 
 This Rectangle Packer class is licensed under the [MIT License](LICENSE). Feel free to use and modify it according to your needs.
+
+### Happy Packing!!
