@@ -1,12 +1,28 @@
-import RectanglePacker from '../RectanglePacker.js';
-import { defaultOptions, createTilesArray } from './utils.js';
-import './style.css';
-
-let tiles = createTilesArray(15);
+import { defaultOptions, createTilesArray } from '../utils.js';
 
 let currentOptions,
   packer,
   shouldShowErrors = false;
+/** Php example specific methods **/
+
+async function postRequestToPackTiles(options) {
+  const url = 'pack.php';
+
+  const formData = new FormData();
+  formData.append('options', JSON.stringify(options));
+
+  return fetch(url, {
+    method: 'POST',
+    body: formData,
+  })
+    .then((response) => response.json())
+
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
+/*** js example */
 
 const options = {
   mobile: {
@@ -46,15 +62,6 @@ window.onload = function () {
   // render the html structure to render div
   const renderDiv = document.getElementById('render');
   renderHTML(renderDiv);
-  // create packer
-  try {
-    packer = new RectanglePacker({
-      ...currentOptions,
-      // onError: reportError
-    });
-  } catch (error) {
-    handlePackingFailure(error);
-  }
 
   // render the rectangle packing
   renderRectanglePacking(currentOptions);
@@ -74,16 +81,9 @@ function saveOptions() {
 function createScreenArea() {
   const container = document.createElement('div');
   container.id = 'screen-area-container';
-  // create note about pixel rounding
-  const note = document.createElement('p');
-  note.id = 'note';
-  note.innerHTML =
-    '<b>Note:</b> sub-pixel browser rendering may cause the far right gutter to be truncated. <br/>This is a known issue, not a bug in the algorithm.';
-  // create screen area
   const screen = document.createElement('div');
   screen.id = 'screen-area';
-  // append to container
-  container.append(screen, note);
+  container.appendChild(screen);
   return container;
 }
 
@@ -94,14 +94,9 @@ function createScreenArea() {
  * @param {number} [tryIndex]
  * @returns
  */
-function renderRectanglePacking(options, tryIndex = 0) {
+async function renderRectanglePacking(options, tryIndex = 0) {
   if (!options) return;
-  if (!packer) {
-    packer = new RectanglePacker({
-      ...options,
-      // onError: reportError
-    });
-  }
+
   const { screenArea } = options;
   // empty screen area
   const screenAreaElement = document.querySelector('#screen-area');
@@ -117,7 +112,7 @@ function renderRectanglePacking(options, tryIndex = 0) {
     // set current options
     currentOptions = { ...options };
   } else {
-    properties = resetPacker();
+    properties = await resetPacker();
   }
   if (properties?.error) {
     const { error, correction, errorDescription } = properties;
@@ -140,15 +135,18 @@ function renderRectanglePacking(options, tryIndex = 0) {
   screenAreaElement.append(...tileElements);
 }
 
-function resetPacker() {
-  if (!packer) {
-    return;
-  }
+async function resetPacker() {
+  //   if (!packer) {
+  //     return;
+  //   }
+  // make request with options
+
   let properties;
-  packer.setOptions(currentOptions);
+  //   packer.setOptions(currentOptions);
   // get new properties
   try {
-    properties = packer.calcTileProperties();
+    properties = await postRequestToPackTiles(currentOptions);
+    console.log('properties', properties);
   } catch (error) {
     console.error(error);
     handlePackingFailure(error);
@@ -230,8 +228,8 @@ function createTiles(properties) {
   for (let i = 0; i < positions.length; i++) {
     const tile = document.createElement('div');
     tile.classList.add('tile');
-    tile.style.width = `${accountForPixelRounding(tileWidth)}px`;
-    tile.style.height = `${accountForPixelRounding(tileHeight)}px`;
+    tile.style.width = `${tileWidth}px`;
+    tile.style.height = `${tileHeight}px`;
     // add tile video if it exists
     if (tiles[i]) {
       const img = document.createElement('img');
@@ -252,22 +250,15 @@ function createTiles(properties) {
     }
     // position the tile
     const [x, y] = positions[i];
-    tile.style.left = `${accountForPixelRounding(x)}px`;
-    tile.style.top = `${accountForPixelRounding(y)}px`;
+    tile.style.left = `${x}px`;
+    tile.style.top = `${y}px`;
     // add tile number
     const tileNumber = document.createElement('div');
     tileNumber.classList.add('tile-number');
     tileNumber.innerText = i + 1;
     tile.appendChild(tileNumber);
     // check for errors
-    if (x + tileWidth > packer.screenWidth) {
-      // reportError(`• Tile ${i + 1} is positioned outside the screen area`, false, false);
-      tile.classList.add('error');
-    }
-    if (y + tileHeight > packer.screenHeight) {
-      // reportError(`• Tile ${i + 1} is positioned outside the screen area`, false, false);
-      tile.classList.add('error');
-    }
+
     tileElements.push(tile);
   }
   if (properties?.tries) {
@@ -284,7 +275,7 @@ function createTiles(properties) {
       tileHeight,
       columns,
       rows,
-      packer.screenArea,
+      currentOptions.screenArea,
 
       realHeight,
       realWidth,
@@ -295,10 +286,6 @@ function createTiles(properties) {
     );
   }
   return tileElements;
-}
-
-function accountForPixelRounding(value) {
-  return Math.floor(value);
 }
 
 function createCurrentErrorContainer() {
@@ -688,7 +675,7 @@ function reportResult(
   results.innerHTML = `<h4>${title}</h4> `;
 
   if (currentOptions.canRemoveTiles) {
-    results.innerHTML += `<p >Tiles removed: ${packer.getTilesRemoved()?.length ?? 0}</p>`;
+    // results.innerHTML += `<p >Tiles removed: ${packer.getTilesRemoved()?.length ?? 0}</p>`;
   }
 
   // create details (report all values)
@@ -754,18 +741,17 @@ function createDetailsReport(
   <p>Tile aspect ratio: ${tileAspectRatio}</p>
   <p>Tile width: ${tileWidth?.toFixed(2)}px</p>
   <p>Tile height: ${tileHeight?.toFixed(2)}px</p>
-  <p>Tiles removed: ${packer?.getTilesRemoved()?.length ?? 0}</p>
 
   <h3>Grid details</h3>
   <p>Screen area: ${screenArea[0]}x${screenArea[1]}</p>
   <p>Columns: ${columns}</p>
   <p>Rows: ${rows}</p>
-  <p>Grid dimensions: ${realWidth?.toFixed(2)} x ${realHeight?.toFixed(2)}</p>
+  <p>Grid dimensions: ${realWidth.toFixed(2)} x ${realHeight.toFixed(2)}</p>
 
   <h3>Performance</h3>
   <p>Performance time: ${performanceTime?.toFixed(2)}ms</p>
   <p>Tries: ${packer?.tries?.length ?? 0}</p>
-  <p>First best guess tile height: ${packer?.initialBestGuessTileHeight?.toFixed(2)}</p>
+  <p>First best guess tile height: ${packer?.initialBestGuessTileHeight.toFixed(2)}</p>
   
   `;
 
@@ -783,15 +769,9 @@ function addEvents() {
       if (event.key === 'ArrowLeft') {
         triesRange.value = parseInt(triesRange.value) - 1;
       }
-
       // dispatch input event
       const inputEvent = new Event('input');
       triesRange.dispatchEvent(inputEvent);
-    }
-    // submit on return
-    if (event.key === 'Enter') {
-      const submitButton = document.querySelector('#submit-button');
-      submitButton.click();
     }
   });
 }

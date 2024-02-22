@@ -78,83 +78,34 @@
  * @property {Array} [tries]
  *
  *
- * @typedef {Object} constructor
+ * @typedef {Object} Options
+ * // required properties
  * @property {number[]} screenArea [width, height]
  * @property {Array<string>} tiles - array of tiles src
  * @property {number} tileAspectRatio - tile aspect ratio
- * // optional properties
+ * // constraints (optional)
  * @property {number} [gutter] - gutter between tiles
  * @property {function} [onError] - callback for errors
- * @property {boolean} [completeRectangle] - if true, the rectangle will be complete, i.e. all rows will be full
- * @property {boolean} [canRemoveTiles] - if true, then tiles will be removed if the solution is not possible
  * @property {number} [minTileHeight] - minimum tile height
  * @property {number} [minTileWidth] - minimum tile width
+ * @property {number} [maxTileHeight] - maximum tile height
  * @property {number} [columns] - number of columns. If set, then the best guess tile height will be calculated based on the columns
  * in some ways, setting columns defeats the purpose of the heuristic, however it is useful to create a grid.
- * @property {number} tryLimit - limit for tries (default 800)
- * @property {number} retryLimit - limit for retries (default 20)
- *
- *
+ * @property {boolean} [allowIncompleteRows] - if true, then the heuristic will allow incomplete rows
+ * @property {boolean} [completeRectangle] - if true, the rectangle will be complete, i.e. all rows will be full
+ * @property {boolean} [canRemoveTiles] - if true, then tiles will be removed if the solution is not possible
+ * @property {number} [tryLimit] - limit for tries (default 800)
+ * @property {number} [errorMargin] - error margin for tile dimensions (default 0.01)
+ * @property {number} [performanceLimit] -  limit for performance (default 1000)
+ * @property {boolean} [debug] - if true, then debug info will be logged to the console
  */
 class RectanglePacker {
   /**
-   *
-   * @param {constructor} constructor
+   * @param {Options} options - packing options
    */
-  constructor({
-    screenArea,
-    tiles,
-    tileAspectRatio,
-    gutter,
-    onError,
-    minTileHeight,
-    maxTileHeight,
-    minTileWidth,
-    columns,
-    completeRectangle,
-    canRemoveTiles,
-    allowIncompleteRows = false,
-    tryLimit,
-    debug = true,
-  }) {
-    if (!screenArea) throw new Error('screenArea is required');
-    if (!tiles) throw new Error('tiles is required');
-    if (!tileAspectRatio) throw new Error('tileAspectRatio is required');
-    if (allowIncompleteRows === true && completeRectangle === true) {
-      throw new Error('allowIncompleteRows and completeRectangle cannot both be true');
-    }
-    if (allowIncompleteRows === true && columns === 0) {
-      throw new Error('allowIncompleteRows requires columns to be set');
-    }
-    // required
-    this.screenArea = screenArea;
-    this.screenWidth = screenArea[0];
-    this.screenHeight = screenArea[1];
-    this.tiles = tiles;
-    this.tileAspectRatio = tileAspectRatio;
-    // constraints
-    this.gutter = gutter ?? 0;
-    this.columns = columns ?? 0;
-    this.completeRectangle = completeRectangle ?? false;
-    this.canRemoveTiles = canRemoveTiles ?? true;
-    this.allowIncompleteRows = allowIncompleteRows ?? false;
-    // calculate min tile dimensions and throw error if a solution is not possible with the given values
-    this.minTileWidth = minTileWidth ?? 0;
-    this.minTileHeight = minTileHeight ?? 0;
-    this.calcMinTileDimensions(minTileWidth, minTileHeight);
-    this.maxTileHeight = maxTileHeight;
-    this.bestGuessTileHeight = this.calcBestGuessTileHeight();
-    this.initialBestGuessTileHeight = this.bestGuessTileHeight + 0;
-    this.tries = [];
-    this.tryLimit = tryLimit ?? 1000;
-    // default try limit is 800
-    this.performanceStartTime = 0;
-    this.performanceLimit = 1000;
-    this.errorMargin = 0.01;
-    this.onError = onError;
-    this.direction = 1;
-    this.removedTiles = [];
-    this.debug = debug;
+  constructor(options) {
+    // set options
+    this.setOptions(options);
     // bind
     this.getTileDimensions = this.getTileDimensions.bind(this);
     this.getTileGridColumns = this.getTileGridColumns.bind(this);
@@ -165,59 +116,63 @@ class RectanglePacker {
   /**
    * Set options
    *
-   * @typedef {Object} Options
-   * @property {number} tiles
-   * @property {number[]} screenArea
-   * @property {number} tileAspectRatio
-   * @property {number} gutter
-   * @property {number} minTileWidth
-   * @property {number} minTileHeight
-   * @property {number} columns
+   * Set or reset the packing options.
    *
-   * @param {Options} options
+   * Note:  this method overwrites the current options
+   * and sets any non-defined option to the default value.
+   *
+   * @param {Options} options - packing options
    */
-  setOptions(
-    options = {
-      tiles,
-      screenArea,
-      tileAspectRatio,
-      gutter,
-      minTileWidth,
-      minTileHeight,
-      maxTileHeight,
-      columns,
-      completeRectangle,
-      canRemoveTiles,
-    }
-  ) {
-    const {
-      tiles,
-      screenArea,
-      tileAspectRatio,
-      gutter,
-      minTileWidth,
-      minTileHeight,
-      maxTileHeight,
-      columns,
-      completeRectangle,
-      canRemoveTiles,
-    } = options;
-    this.tiles = tiles;
-    this.screenArea = screenArea;
-    this.screenWidth = screenArea[0];
-    this.screenHeight = screenArea[1];
-    this.tileAspectRatio = tileAspectRatio;
-    this.gutter = gutter ?? this.gutter;
-    this.columns = columns ?? this.columns;
-    this.minTileHeight = minTileHeight ?? this.minTileHeight;
-    this.maxTileHeight = maxTileHeight ?? this.maxTileHeight;
-    this.completeRectangle = completeRectangle ?? this.completeRectangle;
-    this.canRemoveTiles = canRemoveTiles ?? this.canRemoveTiles;
-    this.calcMinTileDimensions(minTileWidth, minTileHeight);
+  setOptions(options) {
+    // validate options
+    this.validatePackingOptions(options);
+    // required
+    this.screenArea = options.screenArea;
+    this.screenWidth = options.screenArea[0];
+    this.screenHeight = options.screenArea[1];
+    this.tiles = options.tiles;
+    this.tileAspectRatio = options.tileAspectRatio;
+    // constraints
+    this.gutter = options.gutter ?? 0;
+    this.columns = options.columns ?? 0;
+    this.completeRectangle = options.completeRectangle ?? false;
+    this.canRemoveTiles = options.canRemoveTiles ?? false;
+    this.allowIncompleteRows = options.allowIncompleteRows ?? false;
+    this.minTileWidth = options.minTileWidth ?? 0;
+    this.minTileHeight = options.minTileHeight ?? 0;
+    this.maxTileHeight = options.maxTileHeight ?? 0;
+    // performance
+    this.tryLimit = options.tryLimit ?? 800;
+    this.debug = options.debug ?? false;
+    this.errorMargin = options.errorMargin ?? 0.01;
+    this.performanceLimit = options.performanceLimit ?? 1000;
+    this.onError = options.onError ?? null;
     // reset best guess based on new options
     this.bestGuessTileHeight = this.calcBestGuessTileHeight();
-    this.reset();
-    return { tiles, screenArea, tileAspectRatio };
+    // initalize packer with new options
+    this.init();
+  }
+
+  /**
+   * Initialize packer
+   *
+   * Calculate min tile dimensions based on options, initialize the
+   * best guess tile height, and set the performance / try values
+   */
+  init() {
+    this.calcMinTileDimensions(this.minTileWidth, this.minTileHeight);
+    this.bestGuessTileHeight = this.calcBestGuessTileHeight();
+    this.initialBestGuessTileHeight = this.bestGuessTileHeight;
+    this.direction = 1;
+    this.removedTiles = [];
+    this.tries = [];
+    this.performanceStartTime = 0;
+    // reset performance
+    this.performanceStartTime = performance.now();
+    // reset tries
+    this.tries = [];
+    // reset tiles removed
+    this.removedTiles = [];
   }
 
   setBestGuessTileHeight(bestGuessTileHeight) {
@@ -285,17 +240,24 @@ class RectanglePacker {
   }
 
   /**
-   * Reset
+   * Validate options
    *
-   * reset the packer to its initial state
+   * @param {Options} options - the packing options
+   * @throws {Error} if packing options are not valid
    */
-  reset() {
-    // reset performance
-    this.performanceStartTime = performance.now();
-    // reset tries
-    this.tries = [];
-    // reset tiles removed
-    this.removedTiles = [];
+  validatePackingOptions(options) {
+    const { screenArea, tiles, tileAspectRatio, allowIncompleteRows, completeRectangle, columns } =
+      options;
+    if (!screenArea) throw new Error('screenArea is required');
+    if (!tiles || !Array.isArray(tiles))
+      throw new Error('tiles is required and must be an array with length greater than zero');
+    if (!tileAspectRatio) throw new Error('tileAspectRatio is required');
+    if (allowIncompleteRows === true && completeRectangle === true) {
+      throw new Error('allowIncompleteRows and completeRectangle cannot both be true');
+    }
+    if (allowIncompleteRows === true && columns === 0) {
+      throw new Error('allowIncompleteRows requires columns to be set');
+    }
   }
 
   /**

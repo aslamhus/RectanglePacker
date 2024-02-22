@@ -107,88 +107,94 @@ class RectPacker
      *
      *
      * @param array $options {
-     *      @type array $screenArea [width, height]
-     *      @type array $tiles
-     *      @type float $tileAspectRatio
-     *      @type int $gutter
-     *      @type function $onError
-     *      @type int $minTileHeight
-     *      @type int $minTileWidth
-     *      @type int $maxTileHeight
-     *      @type int $columns
-     *      @type bool $completeRectangle
-     *      @type bool $canRemoveTiles
-     *      @type bool $allowIncompleteRows
-     *      @type int $tryLimit
-     *      @type int $performanceLimit
-     *      @type float $errorMargin
+     *      @property array $screenArea [width, height]
+     *      @property array $tiles - array of tiles
+     *      @property float $tileAspectRatio - aspect ratio of the tiles
+     *      @property int $gutter - gutter between tiles
+     *      @property function $onError - callback for error
+     *      @property int $minTileHeight - minimum tile height
+     *      @property int $minTileWidth - minimum tile width
+     *      @property int $maxTileHeight - maximum tile height
+     *      @property int $columns - number of columns. If set, then the best guess tile height will be calculated based on the columns
+     *      in some ways, setting columns defeats the purpose of the heuristic, however it is useful for creating a grid
+     *      @property bool $allowIncompleteRows - allow incomplete rows. This option must be used in conjunction with the columns option
+     *      @property bool $completeRectangle - whether the rectangle should be complete (all rows are full)
+     *      @property bool $canRemoveTiles - whether tiles can be removed
+     *      @property int $tryLimit - the maximum number of tries before the heuristic gives up
+     *      @property int $performanceLimit - the maximum time in seconds before the heuristic gives up
+     *      @property bool $debug -
+     *      @property float $errorMargin
      * }
      */
     public function __construct($options)
     {
-        if (empty($options['screenArea'])) {
-            throw new Exception('screenArea is required');
-        }
-        if (empty($options['tiles'])) {
-            throw new Exception('tiles is required');
-        }
-        if (empty($options['tileAspectRatio'])) {
-            throw new Exception('tileAspectRatio is required');
-        }
+        // set options
+        $this->setOptions($options);
+    }
+
+    /**
+    * Reset the packer with the given options
+    *
+    * Note:  this method overwrites the current options
+    * and sets any non-defined option to the default value.
+    *
+    * @param array $options
+    * @see constructor
+    */
+    public function setOptions($options)
+    {
+        // validate options
+        $this->validatePackingOptions($options);
         // required
         $this->screenArea = $options['screenArea'];
         $this->screenWidth = $options['screenArea'][0];
         $this->screenHeight = $options['screenArea'][1];
         $this->tiles = $options['tiles'];
-        // constraints
         $this->tileAspectRatio = $options['tileAspectRatio'];
-        $this->gutter = $options['gutter'] ?? 0;
-        $this->onError = $options['onError'] ?? null;
-        $this->minTileHeight = $options['minTileHeight'] ?? 0;
-        $this->minTileWidth = $options['minTileWidth'] ?? 0;
-        $this->maxTileHeight = $options['maxTileHeight'] ?? 0;
-        $this->columns = $options['columns'] ?? 0;
+        // constraints
+        $this->gutter = $options['gutter'] ??  0;
+        $this->columns = $options['columns'] ??  0;
         $this->completeRectangle = $options['completeRectangle'] ?? false;
+        $this->canRemoveTiles = $options['canRemoveTiles'] ??  false;
         $this->allowIncompleteRows = $options['allowIncompleteRows'] ?? false;
-
-        $this->canRemoveTiles = $options['canRemoveTiles'] ?? false;
-        $this->tryLimit = $options['tryLimit'] ?? self::DEFAULT_TRY_LIMIT;
-        $this->performanceLimit = $options['performanceLimit'] ?? self::DEFAULT_PERFORMANCE_LIMIT;
+        $this->minTileWidth = $options['minTileWidth'] ?? 0;
+        $this->minTileHeight = $options['minTileHeight'] ??  0;
+        $this->maxTileHeight = $options['maxTileHeight'] ?? 0;
+        // performance
+        $this->tryLimit = $options['tryLimit'] ?? 800;
+        $this->debug = $options['debug'] ??  false;
+        $this->errorMargin = $options['errorMargin'] ?? 0.01;
+        $this->performanceLimit = $options['performanceLimit']  ?? 1000;
+        $this->onError = $options['onError'] ??  null;
+        // reset best guess based on new options
         $this->bestGuessTileHeight = $this->calcBestGuessTileHeight();
-        $this->initialBestGuessTileHeight = $this->bestGuessTileHeight;
-        $this->errorMargin = $options['errorMargin'] ?? self::DEFAULT_ERROR_MARGIN;
-        $this->debug = $options['debug'] ?? false;
-        if ($this->allowIncompleteRows === true && $this->completeRectangle === true) {
-            throw new Exception('allowIncompleteRows and completeRectangle cannot both be true');
-        }
-        if ($this->allowIncompleteRows === true && $this->columns === 0) {
-            throw new Exception('allowIncompleteRows requires columns to be set');
-        }
-        $this->calcMinTileDimensions($this->minTileWidth, $this->minTileHeight);
+        // initialize packer with new options
+        $this->init();
     }
 
     /**
-     * Reset the packer with the given options
-     * @param array $options
-     * @see constructor
+     * Initialize packer
+     *
+     * This method is called from setOptions.
+     *
+     * Calculate min tile dimensions based on options, initialize the
+     * best guess tile height, and set the performance / try values
      */
-    public function setOptions($options)
+    private function init()
     {
-        // reset the packer with the given options
-        foreach($options as $key => $value) {
-            if(property_exists($this, $key)) {
-                $this->{$key} = $value ?? $this->{$key};
-            } else {
-                throw new Exception("Property $key does not exist");
-
-            }
-        }
         $this->calcMinTileDimensions($this->minTileWidth, $this->minTileHeight);
-        // reset best guess based on new options
         $this->bestGuessTileHeight = $this->calcBestGuessTileHeight();
-        $this->reset();
-
-        return ['tiles' => $this->tiles, 'screenArea' => $this->screenArea, 'tileAspectRatio' => $this->tileAspectRatio];
+        $this->initialBestGuessTileHeight = $this->bestGuessTileHeight;
+        $this->direction = 1;
+        $this->removedTiles = [];
+        $this->tries = [];
+        $this->performanceStartTime = 0;
+        // reset performance
+        $this->performanceStartTime = microtime(true);
+        // reset tries
+        $this->tries = [];
+        // reset tiles removed
+        $this->removedTiles = [];
     }
 
     /**
@@ -269,17 +275,43 @@ class RectPacker
         $this->direction = $this->direction * -1;
     }
 
+
+
     /**
-     * Reset the packer
+     * Validate options
+     *
+     * @param array options - the packing options @see constructor
+     * @throws Exception if packing options are not valid
      */
-    public function reset()
+    private function validatePackingOptions(array $options)
     {
-        // reset performance
-        $this->performanceStartTime = microtime(true);
-        // reset tries
-        $this->tries = [];
-        // reset tiles removed
-        $this->removedTiles = [];
+
+        if (empty($options['screenArea'])) {
+            throw new Exception('screenArea is required');
+        }
+        if (empty($options['tiles']) || !is_array($options['tiles'])) {
+            throw new Exception('tiles option is required and must be an array with length greater than zero');
+        }
+        if (empty($options['tileAspectRatio'])) {
+            throw new Exception('tileAspectRatio is required');
+        }
+
+        if (
+            isset($options['allowIncompleteRows']) &&
+             isset($options['completeRectangle']) &&
+             $options['allowIncompleteRows'] === true &&
+             $options['completeRectangle'] === true
+        ) {
+            throw new Exception('allowIncompleteRows and completeRectangle cannot both be true');
+        }
+        if (
+            isset($options['allowIncompleteRows']) &&
+            isset($options['columns']) &&
+            $options['allowIncompleteRows'] === true &&
+            $options['columns'] === 0
+        ) {
+            throw new Exception('allowIncompleteRows requires columns to be set');
+        }
     }
 
     /**
