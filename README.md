@@ -1,6 +1,6 @@
 # Rectangle Packer
 
-`RectanglePacker` is a JavaScript\PHP class designed to efficiently pack rectangles of the same aspect ratio into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm. For more information on the this problem see the [wiki](https://en.wikipedia.org/wiki/Rectangle_packing). This heuristic solves the second variant listed in the article, _**Packing identical squares in a rectilinear polygon.**_
+`RectanglePacker` is a JavaScript\PHP class designed to efficiently pack rectangles of the same aspect ratio into a defined space, tackling the NP-hard bin packing problem using a heuristic algorithm. For more information on this problem see the [wiki](https://en.wikipedia.org/wiki/Rectangle_packing). This heuristic solves the second variant listed in the article, _**Packing identical squares in a rectilinear polygon.**_
 
 ## Defining the problem
 
