@@ -18,6 +18,8 @@ If you'd like to take the algorithm for a spin, you can find a testing applicati
 
 Play with different screen areas, numbers of tiles, gutter size, tile aspect ratio and more.
 
+![rectangle packing algorithm visualizer](/visualizer.png)
+
 ## Usage
 
 This class is available in `JavaScript` and `PHP` for client and server implementation.

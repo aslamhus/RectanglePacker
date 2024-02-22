@@ -261,6 +261,13 @@ button:hover {
 
   color: rgba(255, 255, 255, 0.642);
 }
+#sidebar-title-container p a {
+  margin: 0.25rem 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.642);
+}
 #screen-area-container {
   position: relative;
   flex-basis: 90%;
