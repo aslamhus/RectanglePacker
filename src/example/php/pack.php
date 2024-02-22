@@ -13,7 +13,7 @@ try {
     $options = json_decode($options, true);
     // pack the tiles
     $packer = new RectPacker($options);
-    $result = $packer->calcTileProperties();
+    $result = $packer->pack();
     // return the result
     echo json_encode($result);
     http_response_code(200);

@@ -2,6 +2,7 @@ import path from 'path';
 import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 export default {
   mode: 'development',
@@ -19,12 +20,31 @@ export default {
       template: path.resolve(__dirname, '../example/index.html'),
       chunks: ['app'],
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: '../example/rectangle-packer-problem',
+          to: path.resolve(__dirname, '../../example'),
+        },
+      ],
+    }),
   ],
   module: {
     rules: [
       {
         test: /.s?css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+            },
+          },
+        ],
       },
     ],
   },

@@ -514,15 +514,15 @@ function createOptionsContainer() {
   canRemoveTilesInput.checked = currentOptions.canRemoveTiles;
   canRemoveTilesContainer.append(canRemoveTilesLabel, canRemoveTilesInput);
   // allow incomplete rows input
-  const allowIncompleteRowsContainer = document.createElement('div');
-  allowIncompleteRowsContainer.classList.add('checkbox-container');
-  const allowIncompleteRowsLabel = document.createElement('label');
-  allowIncompleteRowsLabel.innerText = 'Allow incomplete rows';
-  const allowIncompleteRowsInput = document.createElement('input');
-  allowIncompleteRowsInput.id = 'allow-incomplete-rows-input';
-  allowIncompleteRowsInput.type = 'checkbox';
-  allowIncompleteRowsInput.checked = currentOptions.allowIncompleteRows;
-  allowIncompleteRowsContainer.append(allowIncompleteRowsLabel, allowIncompleteRowsInput);
+  const allowIncompleteRowContainer = document.createElement('div');
+  allowIncompleteRowContainer.classList.add('checkbox-container');
+  const allowIncompleteRowLabel = document.createElement('label');
+  allowIncompleteRowLabel.innerText = 'Allow incomplete rows';
+  const allowIncompleteRowInput = document.createElement('input');
+  allowIncompleteRowInput.id = 'allow-incomplete-rows-input';
+  allowIncompleteRowInput.type = 'checkbox';
+  allowIncompleteRowInput.checked = currentOptions.allowIncompleteRow;
+  allowIncompleteRowContainer.append(allowIncompleteRowLabel, allowIncompleteRowInput);
   // append inputs to constraints inputs container
   constraintsInputsContainer.append(
     minTileHeightContainer,
@@ -530,7 +530,7 @@ function createOptionsContainer() {
     columnsContainer,
     completeRectangleContainer,
     canRemoveTilesContainer,
-    allowIncompleteRowsContainer
+    allowIncompleteRowContainer
   );
   // append to constraints container
   constraintsContainer.append(constraintsTitle, constraintsInputsContainer);
@@ -553,7 +553,7 @@ function createOptionsContainer() {
       columns: parseInt(columnsInput.value),
       completeRectangle: completeRectangleInput.checked,
       canRemoveTiles: canRemoveTilesInput.checked,
-      allowIncompleteRows: allowIncompleteRowsInput.checked,
+      allowIncompleteRow: allowIncompleteRowInput.checked,
       tileAspectRatio: aspectRatioWidthInput.value / aspectRatioHeightInput.value,
     };
     // save options to local storage

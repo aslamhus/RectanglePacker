@@ -30,7 +30,9 @@
   },
   "homepage": "https://github.com/aslamhus/RectanglePacker#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.10.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
     "mocha": "^10.3.0",
     "style-loader": "^3.3.4",

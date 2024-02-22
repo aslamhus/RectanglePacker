@@ -54,11 +54,11 @@ use Exception;
  *  i.e. all rows will be full. Complete rectangle option is not always possible, especially if the number of tiles is prime.
  * If you enable canRemoveTiles, then the heuristic will remove tiles until the rectangle is complete.
  *
- * ### AllowIncompleteRows
+ * ### allowIncompleteRow
  *
- * If the allowIncompleteRows option is set to true, then the heuristic will allow incomplete rows.
+ * If the allowIncompleteRow option is set to true, then the heuristic will allow incomplete rows.
  * This option must be used in conjunction with the columns option.
- * For instance, if you specify 10 columns and allowIncompleteRows,
+ * For instance, if you specify 10 columns and allowIncompleteRow,
  * then the heuristic will allow the last row to have less than 10 tiles.
  *
  *
@@ -94,7 +94,7 @@ class RectPacker
     private $positions;
     private $direction = 1;
     private array $removedTiles = [];
-    private bool $allowIncompleteRows = false;
+    private bool $allowIncompleteRow = false;
     private bool $debug = false;
     // defaults
     public const DEFAULT_PERFORMANCE_LIMIT = 1000;
@@ -117,7 +117,7 @@ class RectPacker
      *      @property int $maxTileHeight - maximum tile height
      *      @property int $columns - number of columns. If set, then the best guess tile height will be calculated based on the columns
      *      in some ways, setting columns defeats the purpose of the heuristic, however it is useful for creating a grid
-     *      @property bool $allowIncompleteRows - allow incomplete rows. This option must be used in conjunction with the columns option
+     *      @property bool $allowIncompleteRow - allow incomplete rows. This option must be used in conjunction with the columns option
      *      @property bool $completeRectangle - whether the rectangle should be complete (all rows are full)
      *      @property bool $canRemoveTiles - whether tiles can be removed
      *      @property int $tryLimit - the maximum number of tries before the heuristic gives up
@@ -156,7 +156,7 @@ class RectPacker
         $this->columns = $options['columns'] ??  0;
         $this->completeRectangle = $options['completeRectangle'] ?? false;
         $this->canRemoveTiles = $options['canRemoveTiles'] ??  false;
-        $this->allowIncompleteRows = $options['allowIncompleteRows'] ?? false;
+        $this->allowIncompleteRow = $options['allowIncompleteRow'] ?? false;
         $this->minTileWidth = $options['minTileWidth'] ?? 0;
         $this->minTileHeight = $options['minTileHeight'] ??  0;
         $this->maxTileHeight = $options['maxTileHeight'] ?? 0;
@@ -297,20 +297,20 @@ class RectPacker
         }
 
         if (
-            isset($options['allowIncompleteRows']) &&
+            isset($options['allowIncompleteRow']) &&
              isset($options['completeRectangle']) &&
-             $options['allowIncompleteRows'] === true &&
+             $options['allowIncompleteRow'] === true &&
              $options['completeRectangle'] === true
         ) {
-            throw new Exception('allowIncompleteRows and completeRectangle cannot both be true');
+            throw new Exception('allowIncompleteRow and completeRectangle cannot both be true');
         }
         if (
-            isset($options['allowIncompleteRows']) &&
+            isset($options['allowIncompleteRow']) &&
             isset($options['columns']) &&
-            $options['allowIncompleteRows'] === true &&
+            $options['allowIncompleteRow'] === true &&
             $options['columns'] === 0
         ) {
-            throw new Exception('allowIncompleteRows requires columns to be set');
+            throw new Exception('allowIncompleteRow requires columns to be set');
         }
     }
 
@@ -325,13 +325,13 @@ class RectPacker
             return true;
         }
         // if the number of tiles is less than the number of columns, then the columns constraint cannot be satisfied
-        if ($this->columns > 0 && count($this->tiles) < $this->columns && $this->allowIncompleteRows === false) {
-            
+        if ($this->columns > 0 && count($this->tiles) < $this->columns && $this->allowIncompleteRow === false) {
+
             throw new Exception('Solution not possible for columns constraint and number of tiles');
         }
         if($this->completeRectangle) {
             // if the number of tiles is a prime number, then the rectangle will never be complete
-            if($this->isPrime(count($this->tiles)) && !$this->allowIncompleteRows) {
+            if($this->isPrime(count($this->tiles)) && !$this->allowIncompleteRow) {
                 throw new Exception('Solution is not possible for a complete rectangle with a prime number of tiles');
             }
 
@@ -369,10 +369,10 @@ class RectPacker
         $rows = $properties['rows'];
         // ccalculate row width, column height (including gutter)
         $rowWidth = $tileWidth * $columns + $this->gutter * ($columns + 1);
-        // if allowIncompleteRows is true and there is only one row
+        // if allowIncompleteRow is true and there is only one row
         // then the total tiles per row may be less than the number of columns
         // check if there is only one row, then use the number of tiles as the number of columns
-        if ($this->allowIncompleteRows === true && $rows === 1) {
+        if ($this->allowIncompleteRow === true && $rows === 1) {
             $rowWidth = ($tileWidth + $this->gutter) * count($this->tiles) + $this->gutter;
         }
         $columnHeight = $tileHeight * $rows + $this->gutter * ($rows + 1);
@@ -403,7 +403,7 @@ class RectPacker
         }
         // underflow screen width
         // Note: there is an edge case where the underflow screen width is allowed
-        $edgeCase = $this->allowIncompleteRows === true && $rows === 1;
+        $edgeCase = $this->allowIncompleteRow === true && $rows === 1;
         if ($rowWidth < $screenWidth && $edgeCase === false) {
             $discrepancy = $screenWidth - $rowWidth;
             if (abs($discrepancy) > $this->errorMargin) {
@@ -475,7 +475,7 @@ class RectPacker
     private function validateColumnConstraintIsSatisfied(array $properties)
     {
         // edge case where the number of tiles is less than the number of columns
-        $edgeCase = $this->allowIncompleteRows === true && count($this->tiles) < $properties['columns'];
+        $edgeCase = $this->allowIncompleteRow === true && count($this->tiles) < $properties['columns'];
         if (
             $this->columns > 0 &&
             !empty($properties) &&
@@ -515,13 +515,17 @@ class RectPacker
     }
 
     /**
+     * Pack
+     *
      * Calculate tile properties
-     * This method is a heuristic that attempts to pack the tiles into the screen area.
+     *
+     * This is the main method of the heuristic. It attempts to pack the tiles into the screen area.
      * The main method of the heuristic is getTileProperties, which calculates the tile properties
      * The heuristic will recursively call getTileProperties until the tiles fit the screen area.
+     *
      * @return array - tile properties
      */
-    public function calcTileProperties()
+    public function pack()
     {
         // first validate a solution is possible based on the best guess
         $this->validateSolutionIsPossible();
@@ -534,7 +538,6 @@ class RectPacker
         $this->performanceStartTime = microtime(true);
         // begin heuristic
         while (!$properties) {
-
             try {
                 // escape hatch for try limit / stack overflow
                 $this->validateTryLimit();
@@ -736,13 +739,13 @@ class RectPacker
         if ($this->canRemoveTiles) {
             $this->removeTile();
             $this->bestGuessTileHeight = $this->initialBestGuessTileHeight = $this->calcBestGuessTileHeight();
-            return $this->calcTileProperties();
+            return $this->pack();
         }
 
         // try again with a different starting best guess
         $this->bestGuessTileHeight = $this->initialBestGuessTileHeight = $this->initialBestGuessTileHeight / 2;
 
-        return $this->calcTileProperties();
+        return $this->pack();
     }
 
     /**
@@ -905,7 +908,7 @@ class RectPacker
     private function getTileGridColumns($tileWidth)
     {
         $columnsPerRow = (int) round(($this->screenWidth - $this->gutter) / ($tileWidth + $this->gutter));
-        if (count($this->tiles) < $columnsPerRow - 1 && !$this->allowIncompleteRows) {
+        if (count($this->tiles) < $columnsPerRow - 1 && !$this->allowIncompleteRow) {
             throw new Exception('Tile width and number of tiles cannot fill the container width');
         }
 
