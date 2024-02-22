@@ -324,6 +324,11 @@ class RectPacker
         if($this->canRemoveTiles) {
             return true;
         }
+        // if the number of tiles is less than the number of columns, then the columns constraint cannot be satisfied
+        if ($this->columns > 0 && count($this->tiles) < $this->columns && $this->allowIncompleteRows === false) {
+            
+            throw new Exception('Solution not possible for columns constraint and number of tiles');
+        }
         if($this->completeRectangle) {
             // if the number of tiles is a prime number, then the rectangle will never be complete
             if($this->isPrime(count($this->tiles)) && !$this->allowIncompleteRows) {
@@ -469,11 +474,13 @@ class RectPacker
      */
     private function validateColumnConstraintIsSatisfied(array $properties)
     {
+        // edge case where the number of tiles is less than the number of columns
+        $edgeCase = $this->allowIncompleteRows === true && count($this->tiles) < $properties['columns'];
         if (
             $this->columns > 0 &&
             !empty($properties) &&
-             $properties['columns'] !== $this->columns &&
-             $this->allowIncompleteRows === false
+             $properties['columns'] !== $this->columns  &&
+             $edgeCase === false
         ) {
             throw new PackerException('Could not satisfy columns constraint', [
                 'guess' => $this->bestGuessTileHeight,

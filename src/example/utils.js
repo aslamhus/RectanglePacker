@@ -44,6 +44,7 @@ export const createTilesArray = (numberOfTiles) => {
  * @throws {Error} - if the result does not match the expected values
  */
 export const compareExpectedPackingResult = (result, expected, assert) => {
+  // check all expected values against the result
   Object.entries(expected).forEach((entry, index) => {
     const [key, expected] = entry;
     let value = result[key];

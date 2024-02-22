@@ -530,7 +530,7 @@ function createOptionsContainer() {
   const allowIncompleteRowsContainer = document.createElement('div');
   allowIncompleteRowsContainer.classList.add('checkbox-container');
   const allowIncompleteRowsLabel = document.createElement('label');
-  allowIncompleteRowsLabel.innerText = 'Allow incomplete rows';
+  allowIncompleteRowsLabel.innerText = 'Allow first row to be incomplete';
   const allowIncompleteRowsInput = document.createElement('input');
   allowIncompleteRowsInput.id = 'allow-incomplete-rows-input';
   allowIncompleteRowsInput.type = 'checkbox';

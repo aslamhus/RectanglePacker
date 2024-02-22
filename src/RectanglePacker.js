@@ -281,6 +281,10 @@ class RectanglePacker {
     if (this.canRemoveTiles) {
       return true;
     }
+    // if the number of tiles is less than the number of columns, then the columns constraint cannot be satisfied
+    if (this.columns > 0 && this.tiles.length < this.columns && !this.allowIncompleteRows) {
+      throw new Error('Solution not possible for columns constraint and number of tiles');
+    }
 
     if (this.completeRectangle) {
       // if the number of tiles is a prime number, then the rectangle will never be complete
@@ -414,12 +418,10 @@ class RectanglePacker {
   }
 
   validateColumnConstraintIsSatisfied(properties) {
-    if (
-      this.columns > 0 &&
-      properties &&
-      properties.columns !== this.columns &&
-      !this.allowIncompleteRows
-    ) {
+    // edge case where the number of tiles is less than the number of columns
+    const edgeCase = this.allowIncompleteRows === true && this.tiles.length < properties.columns;
+
+    if (this.columns > 0 && properties && properties.columns !== this.columns && !edgeCase) {
       throw new PackerError('Could not satisfy columns constraint', {
         guess: this.bestGuessTileHeight,
         predicate: `properties.columns (${properties.columns}) !== this.columns (${this.columns})`,
