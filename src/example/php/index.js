@@ -346,7 +346,7 @@ function createSidebar() {
   sideBarTitle.innerText = 'Rectangle Packer v3.0.0';
   // description
   const sideBarDescription = document.createElement('p');
-  sideBarDescription.innerText = 'by @aslamhus';
+  sideBarDescription.innerHTML = '<a href="https://github.com/aslamhus">by @aslamhus</a>';
   // append to title container
   titleContainer.append(sideBarTitle, sideBarDescription);
   sideBar.append(titleContainer);
